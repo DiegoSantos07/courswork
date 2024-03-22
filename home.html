@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        body {
+            font-family: sans-serif;
+            position: relative;
+            padding: 20px;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .climateGroup {
+            text-align: left;
+            padding: 55px;
+            margin-bottom: 100px;
+            margin-top: 20px;
+            margin-left: auto;
+            color: black;
+            box-shadow: 0 5px 8px rgba(1, 1, 1, 0.1);
+        }
+
+        .logo img {
+            float: left;
+            text-align: left;
+            margin-right: 10px;
+            margin-left: 100px;
+            margin-top: 35px;
+            max-width: 210px;
+            height: auto;
+        }
+
+        .forest img {
+            max-width: 100%;
+            position: relative;
+            padding: 20px
+        }
+
+        nav {
+            align-items: center;
+            margin-top: -95px;
+            margin-bottom: 10px;
+            box-shadow: 0 10px 8px rgba(1, 1, 1, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 10px;
+            margin: 0 auto;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.5s ease;
+            padding: 10px 20px;
+            border: 1px solid transparent;
+            display: inline-block;
+        }
+
+        nav ul li a.active, nav ul li a:hover  {
+            color: #007bff; 
+            background-color: #ffffff;
+            border-color: black;
+        }
+
+        main {
+            padding: 20px;
+            width: 100%;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        footer, .topBar {
+            background-color: rgb(15, 122, 79);
+            padding: 20px;          
+            text-align: center;
+        }
+
+        .videoContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video1 video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .videoText {
+            padding: 20px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .galleryContainer {
+            display: flex;
+            align-items: center;
+            background-color: #ffffa1;
+            box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
+            max-width: 80%;
+        }
+
+        .galleryContainer img {
+            max-width: 70%;
+            width: 50%;
+            height: auto;
+        }
+
+        .galleryText {
+            flex: 1;
+            padding: 20px;
+            align-items: center;
+            margin-left: 0;
+        }
+
+        .shopContainer {
+            display: flex;
+            align-items: center;
+            background-color: #ffffa1;
+            box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
+            max-width: 80%;
+        }
+
+        .shopContainer img {
+            max-width: 70%;
+            width: 50%;
+            height: auto;
+        }
+
+        .shopText {
+            flex: 1;
+            padding: 20px;
+            align-items: center;
+            margin-left: 0;
+        }
+
+        .userprofileContainer {
+            display: flex;
+            align-items: center;
+            background-color: #ffffa1;
+            box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
+            max-width: 80%;
+        }
+
+        .userprofileContainer img {
+            max-width: 70%;
+            width: 50%;
+            height: auto;
+        }
+
+        .userprofileText {
+            flex: 1;
+            padding: 20px;
+            align-items: center;
+            margin-left: 0;
+        }
+
+        .feedbackContainer {
+            display: flex;
+            align-items: center;
+            background-color: #ffffa1;
+            box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
+            max-width: 80%;
+        }
+
+        .feedbackContainer img {
+            max-width: 70%;
+            width: 50%;
+            height: auto;
+        }
+
+        .feedbackText {
+            flex: 1;
+            padding: 20px;
+            align-items: center;
+            margin-left: 0;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <header>
+
+        <div class="topBar">
+        </div>
+       
+        <div class="logo">
+            <img src="Images/image1.png" alt="Website Logo - Child planting a tree holding with hands stock photo. Reference: https://www.istockphoto.com/photo/child-planting-a-tree-holding-with-hands-gm1462151119-495782923?searchscope=image%2Cfilm">
+        </div>
+       
+        <div class="climateGroup">
+            <h1>Climate Group</h1>
+            <p>Working with United Nations for a better planet.</p>
+        </div>
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="userprofile.html">User Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="#">Content</a></li>
+                <li><a href="#">Page editor</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+        <div class="forest">
+            <img src="Images/image2.jpg" alt="Tranquil woodland glade dappled sunlight ferns green forest panorama. Reference: https://www.istockphoto.com/photo/tranquil-woodland-glade-dappled-sunlight-ferns-green-forest-panorama-gm1494540194-517841399?searchscope=image%2Cfilm">
+        </div>
+    
+    <main>
+
+        <div class="videoContainer">
+            <section class="video1">
+                <video controls>
+                    <source src="Videos/video1.mp4" type="video/mp4">
+                </video>
+            </section>
+
+            <section class="videoText">
+                <h2>You are not alone, we are a community</h2>
+                <h2>and we will fight together!</h2>
+            </section>
+        </div><br><br>
+
+        <div class="galleryContainer">
+            <img src="Images/image3.jpg" alt="Mature woman protesting in the street stock photo. Reference: https://www.istockphoto.com/photo/mature-woman-protesting-in-the-street-gm1432212075-474543157?searchscope=image%2Cfilm">
+            
+            <section class="galleryText">
+                <h2>Visit our gallery </h2>
+                <h2>and check what we have been doing so far to contribute for a green future</h2>
+            </section>
+        </div><br><br>
+
+        <div class="shopContainer">
+            <img src="Images/image4.jpg" alt="Second hand wardrobe, circular fashion, rent, swap clothes idea. stock photo. Reference: https://www.istockphoto.com/photo/second-hand-wardrobe-circular-fashion-rent-swap-clothes-idea-gm1307052468-397445054?searchscope=image%2Cfilm">
+            
+            <section class="shopText">
+                <h2>Access our recyclable shop</h2>
+                <h2>We offer a variety of products and we allocate the money for non-profit organisations focused on climate change</h2>
+            </section>
+        </div><br><br>
+
+        <div class="userprofileContainer">
+            <img src="Images/image5.jpg" alt="Team of young and diversity volunteer worker group enjoy charitable social work[...]. Reference: https://www.istockphoto.com/photo/team-of-young-and-diversity-volunteer-worker-group-enjoy-charitable-social-work-gm1407844610-458901066?searchscope=image%2Cfilm">
+            
+            <section class="userprofileText">
+                <h2>Become a member of the Climate Group </h2>
+                <h2>Only with a few details you can join our team and start contributing</h2>
+            </section>
+        </div><br><br>
+
+        <div class="feedbackContainer">
+            <img src="Images/image6.jpg" alt="Businessman holding global recycle symbol[...]. Reference: https://www.istockphoto.com/photo/businessman-holding-global-recycle-symbol-for-circular-economy-to-reduce-waste-by-gm2035517196-562343041?searchscope=image%2Cfilm">
+            
+            <section class="feedbackText">
+                <h2>Your feedback matters</h2>
+                <h2>Tell us what you think and rate our website</h2>
+            </section>
+        </div><br><br>
+        
+        <section class="ourMission">
+            <h2>Our Mission</h2><br>
+            <p>Climate Group is committed to the UN's Global Goals and we understand that it is essentatial for actions to be taken urgently due to the recent climate disasters. We dedicate funds from our recyclable shop to institution which are acting for a green future, we also offer the possibility for volunteering to fight against waste, encourage the use of renewable energy, give financial support and participation on climate action conferences.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Footer content</p>
+
+    </footer>
+</body>
+</html>
