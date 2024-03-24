@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Feedback form</title>
+
+  <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    body {
+        font-family: sans-serif;
+        position: relative;
+        padding: 10px;
+        margin: 0 auto;
+        max-width: 1500px;
+    }
+
+    header {
+        padding: 20px;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .climateGroup {
+        text-align: center;
+        align-items: center;
+        padding: 55px;
+        margin-bottom: 100px;
+        margin-top: 20px;
+        margin-left: auto;
+        color: black;
+        box-shadow: 0 5px 8px rgba(1, 1, 1, 0.1);
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(15, 122, 79);
+    }
+
+    .logo img {
+        float: left;
+        text-align: left;
+        margin-right: 10px;
+        margin-left: 100px;
+        margin-top: 20px;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .forest img {
+        max-width: 100%;
+        position: relative;
+        padding: 20px
+    }
+
+    nav {
+        align-items: center;
+        margin-top: -95px;
+        margin-bottom: 10px;
+        box-shadow: 0 10px 8px rgba(1, 1, 1, 0.1);
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.5s ease;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        display: inline-block;
+    }
+
+    nav ul li a.active, nav ul li a:hover  {
+        color: #007bff; 
+        background-color: #ffffff;
+        border-color: black;
+    }
+
+    main {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .topBar {
+        background-color: rgb(15, 122, 79);
+        padding: 2px;          
+    }
+
+    footer {
+        background-color: rgb(15, 122, 79);
+        padding: 20px;
+        text-align: center;
+    }
+
+    label{
+        float: left;
+        margin-right: 30px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+	h1 {
+		text-align: center;
+		color: green;
+	}
+
+    form {
+        padding: 30px;
+        box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
+        justify-content: center;
+        align-items: center;
+    }
+
+    fieldset{
+        background-color: #b9f4ab;
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
+
+    textarea {
+        margin-bottom: 50px;
+    }
+
+    input[type="submit"] {
+        background-color: aliceblue;
+        padding: 5px 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        
+    }
+
+    input[type="submit"]:hover {
+        background-color: beige;
+    }
+
+    input[type="radio"] {
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    footer {
+        background-color: rgb(15, 122, 79);
+        padding: 20px;
+        text-align: center;
+    }
+	
+  </style>
+
+</head>
+  
+<body>
+
+    <header>
+
+        <div class="topBar">
+        </div>
+       
+        <div class="logo">
+            <img src="Images/image1.png" alt="Website Logo - Child planting a tree holding with hands stock photo. Reference: https://www.istockphoto.com/photo/child-planting-a-tree-holding-with-hands-gm1462151119-495782923?searchscope=image%2Cfilm">
+        </div>
+       
+        <div class="climateGroup">
+            <h1>Climate Group</h1>
+            <p>Working with United Nations for a better planet.</p>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a>Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="userprofile.html">User Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="content_ST2.html">Content</a></li>
+                <li><a href="pageEditor_ST2">Page editor</a></li>
+            </ul>
+        </nav><br><br>
+
+    </header>
+  
+    <h1>Feedback form</h1><br><br>
+
+    <form action="mailto: w2005142@westminster.ac.uk" method="get">
+        
+        <fieldset>
+
+        <label for="userName">Name:</label>
+        <input type="text" name="name" id="userName" required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed"><br><br>
+
+        <label for="useEmail">Email:</label>
+            <input type="email" name="email" required><br><br>
+            
+
+        <label for="pleasRate">Please rate our website from 0 to 10 according to your experience, with 0 meaning not satisfied and 10 extremely satisfied:</label><br><br>
+            <label><input type="radio" name="rating" value="0" required> 0</label>
+			<label><input type="radio" name="rating" value="1" required> 1</label>
+			<label><input type="radio" name="rating" value="2" required> 2</label>
+			<label><input type="radio" name="rating" value="3" required> 3</label>
+			<label><input type="radio" name="rating" value="4" required> 4</label>
+			<label><input type="radio" name="rating" value="5" required> 5</label>
+			<label><input type="radio" name="rating" value="6" required> 6</label>
+			<label><input type="radio" name="rating" value="7" required> 7</label>
+			<label><input type="radio" name="rating" value="8" required> 8</label>
+			<label><input type="radio" name="rating" value="9" required> 9</label>
+			<label><input type="radio" name="rating" value="10" required> 10</label>
+			
+        
+        <label for="comments">Please leave us a comment: </label>
+            <textarea name="comments" id="comments"
+            rows="8" cols="60"></textarea><br><br>
+
+		<input type="submit" name="submit-button" value="Submit">
+
+		</fieldset>
+    </form>
+
+    <footer>
+        <h3>Contact Us</h3><br>
+        <p><address><a href="mailto:w2005142@westminster.ac.uk">E-mail: Diego Santos de Freitas</a></address><br>
+
+        <h3>Address</h3><br>
+        <p>115 New Cavendish St, London W1W 6UW</p>
+    </footer>
+
+</body>
+
+</html>
