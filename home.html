@@ -17,7 +17,9 @@
         body {
             font-family: sans-serif;
             position: relative;
-            padding: 20px;
+            padding: 10px;
+            margin: 0 auto;
+            max-width: 1500px;
         }
 
         header {
@@ -28,13 +30,18 @@
         }
 
         .climateGroup {
-            text-align: left;
+            text-align: center;
+            align-items: center;
             padding: 55px;
             margin-bottom: 100px;
             margin-top: 20px;
             margin-left: auto;
             color: black;
             box-shadow: 0 5px 8px rgba(1, 1, 1, 0.1);
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(15, 122, 79);
         }
 
         .logo img {
@@ -42,8 +49,8 @@
             text-align: left;
             margin-right: 10px;
             margin-left: 100px;
-            margin-top: 35px;
-            max-width: 210px;
+            margin-top: 20px;
+            max-width: 300px;
             height: auto;
         }
 
@@ -96,9 +103,14 @@
             padding: 20px;
         }
 
-        footer, .topBar {
+        .topBar {
             background-color: rgb(15, 122, 79);
-            padding: 20px;          
+            padding: 2px;          
+        }
+
+        footer {
+            background-color: rgb(15, 122, 79);
+            padding: 20px;
             text-align: center;
         }
 
@@ -122,9 +134,11 @@
         .galleryContainer {
             display: flex;
             align-items: center;
-            background-color: #ffffa1;
+            background-color: #b9f4ab;
             box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
             max-width: 80%;
+            justify-content: center;
+            margin: 0 auto;
         }
 
         .galleryContainer img {
@@ -143,9 +157,11 @@
         .shopContainer {
             display: flex;
             align-items: center;
-            background-color: #ffffa1;
+            background-color: #b9f4ab;
             box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
             max-width: 80%;
+            justify-content: center;
+            margin: 0 auto;
         }
 
         .shopContainer img {
@@ -161,21 +177,23 @@
             margin-left: 0;
         }
 
-        .userprofileContainer {
+        .userProfileContainer {
             display: flex;
             align-items: center;
-            background-color: #ffffa1;
+            background-color: #b9f4ab;
             box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
             max-width: 80%;
+            justify-content: center;
+            margin: 0 auto;
         }
 
-        .userprofileContainer img {
+        .userProfileContainer img {
             max-width: 70%;
             width: 50%;
             height: auto;
         }
 
-        .userprofileText {
+        .userProfileText {
             flex: 1;
             padding: 20px;
             align-items: center;
@@ -185,9 +203,11 @@
         .feedbackContainer {
             display: flex;
             align-items: center;
-            background-color: #ffffa1;
+            background-color: #b9f4ab;
             box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
             max-width: 80%;
+            justify-content: center;
+            margin: 0 auto;
         }
 
         .feedbackContainer img {
@@ -201,6 +221,30 @@
             padding: 20px;
             align-items: center;
             margin-left: 0;
+        }
+
+        .ourMission {
+            text-align: center;
+        }
+
+        .ourMissionContainer {
+            margin: 0 auto;
+            max-width: 500px;
+            padding: 50px;
+        }
+
+        .ourMissionContainer h2 {
+            margin-bottom: 30px;
+        }
+
+        .ourMissionContainer p {
+            font-size: large;
+            line-height: 1.5;
+        }
+
+        a[href] {
+            text-decoration: none;
+            color:black;
         }
 
 
@@ -222,17 +266,17 @@
             <h1>Climate Group</h1>
             <p>Working with United Nations for a better planet.</p>
         </div>
-        <!-- Navigation Bar -->
+        
         <nav>
             <ul>
-                <li><a href="#" class="active">Home</a></li>
+                <li><a>Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="userprofile.html">User Profile</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="team.html">Team</a></li>
-                <li><a href="#">Content</a></li>
-                <li><a href="#">Page editor</a></li>
+                <li><a href="content_ST2.html">Content</a></li>
+                <li><a href="pageEditor_ST2.html">Page editor</a></li>
             </ul>
         </nav>
 
@@ -261,48 +305,67 @@
             <img src="Images/image3.jpg" alt="Mature woman protesting in the street stock photo. Reference: https://www.istockphoto.com/photo/mature-woman-protesting-in-the-street-gm1432212075-474543157?searchscope=image%2Cfilm">
             
             <section class="galleryText">
-                <h2>Visit our gallery </h2>
-                <h2>and check what we have been doing so far to contribute for a green future</h2>
+                <a href="gallery.html">
+                    <h2>Visit our gallery </h2>
+                    <h2>and check what we have been doing so far to contribute for a green future</h2>
+                </a>
             </section>
+                
         </div><br><br>
 
         <div class="shopContainer">
             <img src="Images/image4.jpg" alt="Second hand wardrobe, circular fashion, rent, swap clothes idea. stock photo. Reference: https://www.istockphoto.com/photo/second-hand-wardrobe-circular-fashion-rent-swap-clothes-idea-gm1307052468-397445054?searchscope=image%2Cfilm">
             
             <section class="shopText">
-                <h2>Access our recyclable shop</h2>
-                <h2>We offer a variety of products and we allocate the money for non-profit organisations focused on climate change</h2>
+                <a href="shop.html">
+                    <h2>Access our recyclable shop</h2>
+                    <h2>We offer a variety of products and we allocate the money for non-profit organisations focused on climate change</h2>
+                </a>
             </section>
         </div><br><br>
 
-        <div class="userprofileContainer">
+        <div class="userProfileContainer">
             <img src="Images/image5.jpg" alt="Team of young and diversity volunteer worker group enjoy charitable social work[...]. Reference: https://www.istockphoto.com/photo/team-of-young-and-diversity-volunteer-worker-group-enjoy-charitable-social-work-gm1407844610-458901066?searchscope=image%2Cfilm">
             
             <section class="userprofileText">
-                <h2>Become a member of the Climate Group </h2>
-                <h2>Only with a few details you can join our team and start contributing</h2>
-            </section>
+                <a href="userprofile.html">
+                    <h2>Become a member of the Climate Group </h2>
+                    <h2>Only with a few details you can join our team and start contributing</h2>
+                </a>
+                </section>
         </div><br><br>
 
         <div class="feedbackContainer">
             <img src="Images/image6.jpg" alt="Businessman holding global recycle symbol[...]. Reference: https://www.istockphoto.com/photo/businessman-holding-global-recycle-symbol-for-circular-economy-to-reduce-waste-by-gm2035517196-562343041?searchscope=image%2Cfilm">
             
             <section class="feedbackText">
-                <h2>Your feedback matters</h2>
-                <h2>Tell us what you think and rate our website</h2>
-            </section>
+                <a href="feedback.html">
+                    <h2>Your feedback matters</h2>
+                    <h2>Tell us what you think and rate our website</h2>
+                </a>
+                </section>
         </div><br><br>
         
         <section class="ourMission">
-            <h2>Our Mission</h2><br>
-            <p>Climate Group is committed to the UN's Global Goals and we understand that it is essentatial for actions to be taken urgently due to the recent climate disasters. We dedicate funds from our recyclable shop to institution which are acting for a green future, we also offer the possibility for volunteering to fight against waste, encourage the use of renewable energy, give financial support and participation on climate action conferences.</p>
+            <div class="ourMissionContainer">
+                <h2>Our Mission</h2><br>
+                <p>Climate Group is committed to the UN's Global Goals and we understand that it is essential for actions to be taken urgently due to the recent climate disasters. We dedicate funds from our recyclable shop to institution which are acting for a green future, we also offer the possibility for volunteering to fight against waste, encourage the use of renewable energy, give financial support and participation on climate action conferences.</p>
+            </div>
         </section>
 
     </main>
 
     <footer>
-        <p>Footer content</p>
+        <h3>Contact Us</h3><br>
+        <p><address><a href="mailto:w2005142@westminster.ac.uk">E-mail: Diego Santos de Freitas</a></address><br>
 
+        <h3>Address</h3><br>
+        <p>115 New Cavendish St, London W1W 6UW</p><br>
+
+        <h3>Accessibility</h3><br>
+        <p>The website ensures accessibility by complying with the WCAG regulations. By providing alternative text and usability, we aim to provide the best experience with the website under improvements. </p>
+        <p>If you have any accessibility concerns please let us know.</p>
     </footer>
+    
 </body>
 </html>
