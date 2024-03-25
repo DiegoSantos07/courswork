@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Page Editor ST2</title>
+    <title>Page Editor Student 2</title>
     <link rel="stylesheet" href="styles.css">
 
     <style>
@@ -17,24 +17,22 @@
         body {
             font-family: sans-serif;
             position: relative;
-            padding: 10px;
-            margin: 0 auto;
-            max-width: 1500px;
+            padding: 0;
+            margin: 0;
         }
 
         header {
-            padding: 20px;
             text-align: center;
             flex-direction: column;
             align-items: center;
         }
 
         .climateGroup {
+            position: relative;
             text-align: center;
             align-items: center;
-            padding: 55px;
-            margin-bottom: 100px;
-            margin-top: 20px;
+            padding: 50px;
+            margin-top: 22px;
             margin-left: auto;
             color: black;
             box-shadow: 0 5px 8px rgba(1, 1, 1, 0.1);
@@ -42,6 +40,9 @@
             font-size: 30px;
             font-weight: bold;
             color: rgb(15, 122, 79);
+            margin-bottom: 150px;
+            z-index: -1;
+            background-color: whitesmoke;
         }
 
         .logo img {
@@ -49,15 +50,16 @@
             text-align: left;
             margin-right: 10px;
             margin-left: 100px;
-            margin-top: 20px;
+            margin-top: 25px;
             max-width: 300px;
             height: auto;
+            border-radius: 10%;
         }
 
         .forest img {
             max-width: 100%;
             position: relative;
-            padding: 20px
+            margin: 0px;
         }
 
         nav {
@@ -65,6 +67,7 @@
             margin-top: -95px;
             margin-bottom: 10px;
             box-shadow: 0 10px 8px rgba(1, 1, 1, 0.1);
+            background-color: whitesmoke;
         }
 
         nav ul {
@@ -97,7 +100,6 @@
         main {
             padding: 20px;
             width: 100%;
-            background-color: azure;
         }
 
         .content {
@@ -109,10 +111,24 @@
             padding: 2px;          
         }
 
+        .top {
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            z-index: 999;
+            font-size: large;
+            font-weight: bold;
+        }
+
         footer {
             background-color: rgb(15, 122, 79);
             padding: 20px;
             text-align: center;
+        }
+
+        a[href] {
+            text-decoration: none;
+            color:black;
         }
 
         h2, h4 {
@@ -160,8 +176,7 @@
                 <li><a href="userprofile.html">User Profile</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="team.html">Team</a></li>
-                <li><a href="content_ST2.html">Content</a></li>
-                <li><a href="pageEditor_ST2">Page editor</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
             </ul>
         </nav>
 
@@ -193,12 +208,20 @@
 
     </main>
 
+    <dl class="top">
+        <dt><span>&#9757;<a href="#top">Move to top</a></span></dt>
+    </dl>
+
     <footer>
         <h3>Contact Us</h3><br>
         <p><address><a href="mailto:w2005142@westminster.ac.uk">E-mail: Diego Santos de Freitas</a></address><br>
 
         <h3>Address</h3><br>
-        <p>115 New Cavendish St, London W1W 6UW</p>
+        <p>115 New Cavendish St, London W1W 6UW</p><br>
+
+        <h3>Accessibility</h3><br>
+        <p>The website ensures accessibility by complying with the WCAG regulations. By providing alternative text and usability, we aim to provide the best experience with the website under improvements. </p>
+        <p>If you have any accessibility concerns please let us know.</p>
     </footer>
     
 </body>
