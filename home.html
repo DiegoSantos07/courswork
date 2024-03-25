@@ -17,13 +17,11 @@
         body {
             font-family: sans-serif;
             position: relative;
-            padding: 10px;
-            margin: 0 auto;
-            max-width: 1500px;
+            padding: 0;
+            margin: 0;
         }
 
         header {
-            padding: 20px;
             text-align: center;
             flex-direction: column;
             align-items: center;
@@ -34,7 +32,6 @@
             text-align: center;
             align-items: center;
             padding: 50px;
-            margin-bottom: 70px;
             margin-top: 22px;
             margin-left: auto;
             color: black;
@@ -62,7 +59,7 @@
         .forest img {
             max-width: 100%;
             position: relative;
-            padding: 20px
+            margin: 0px;
         }
 
         nav {
@@ -114,6 +111,15 @@
             padding: 2px;          
         }
 
+        .top {
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            z-index: 999;
+            font-size: large;
+            font-weight: bold;
+        }
+
         footer {
             background-color: rgb(15, 122, 79);
             padding: 20px;
@@ -142,11 +148,16 @@
         .galleryContainer {
             display: flex;
             align-items: center;
-            background-color: #b9f4ab;
+            background-color: lightyellow;
             box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
             max-width: 80%;
             justify-content: center;
             margin: 0 auto;
+            transition: box-shadow 0.6  ease;
+        }
+
+        .galleryContainer:hover {
+            box-shadow: 10px 8px 30px black;
         }
 
         .galleryContainer img {
@@ -155,21 +166,28 @@
             height: auto;
         }
 
-        .galleryText {
+        .galleryText h2 {
             flex: 1;
             padding: 20px;
             align-items: center;
-            margin-left: 0;
+            margin-left: 20px;
+            line-height: 1.5;
+            text-align: center;
         }
 
         .shopContainer {
             display: flex;
             align-items: center;
-            background-color: #b9f4ab;
+            background-color: paleturquoise;
             box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
             max-width: 80%;
             justify-content: center;
             margin: 0 auto;
+            transition: box-shadow 0.6  ease;
+        }
+
+        .shopContainer:hover {
+            box-shadow: 10px 8px 30px black;
         }
 
         .shopContainer img {
@@ -178,21 +196,28 @@
             height: auto;
         }
 
-        .shopText {
+        .shopText h2 {
             flex: 1;
             padding: 20px;
             align-items: center;
-            margin-left: 0;
+            margin-left: 20px;
+            line-height: 1.5;
+            text-align: center;
         }
 
         .userProfileContainer {
             display: flex;
             align-items: center;
-            background-color: #b9f4ab;
+            background-color: powderblue;
             box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
             max-width: 80%;
             justify-content: center;
             margin: 0 auto;
+            transition: box-shadow 0.6  ease;
+        }
+
+        .userProfileContainer:hover {
+            box-shadow: 10px 8px 30px black;
         }
 
         .userProfileContainer img {
@@ -201,11 +226,13 @@
             height: auto;
         }
 
-        .userProfileText {
+        .userProfileText h2 {
             flex: 1;
             padding: 20px;
             align-items: center;
-            margin-left: 0;
+            margin-left: 20px;
+            line-height: 1.5;
+            text-align: center;
         }
 
         .feedbackContainer {
@@ -214,8 +241,13 @@
             background-color: #b9f4ab;
             box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
             max-width: 80%;
-            justify-content: center;
+            justify-content: flex-start;
             margin: 0 auto;
+            transition: box-shadow 0.6  ease;
+        }
+
+        .feedbackContainer:hover {
+            box-shadow: 10px 8px 30px black;
         }
 
         .feedbackContainer img {
@@ -224,11 +256,41 @@
             height: auto;
         }
 
-        .feedbackText {
+        .feedbackText h2 {
             flex: 1;
             padding: 20px;
             align-items: center;
-            margin-left: 0;
+            margin-left: 20px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .contentPageContainer {
+            text-align: center;
+            margin-top: 70px;
+            background-color: oldlace;
+            box-shadow: 0 5px 30px rgba(2, 1, 2, 0.1);
+        }
+
+        .contentPageContainer h2 {
+            padding: 50px;
+        }
+
+        .contentPageContainer ul {
+            list-style: none;
+            justify-content: center;
+            padding-bottom: 10px;
+        }
+
+        .contentPageContainer ul li {
+            padding-bottom: 20px;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .contentPageContainer ul li:hover {
+            background-color: antiquewhite;
+            transition: background-color 0.5s ease;
         }
 
         .ourMission {
@@ -247,6 +309,7 @@
 
         .ourMissionContainer h2 {
             margin-bottom: 30px;
+
         }
 
         .ourMissionContainer p {
@@ -258,6 +321,7 @@
             text-decoration: none;
             color:black;
         }
+        
 
 
     </style>
@@ -275,7 +339,7 @@
         </div>
        
         <div class="climateGroup">
-            <h1>Climate Group</h1>
+            <h1>Climate Group</a></h1>
             <p>Working with United Nations for a better planet.</p>
         </div>
         
@@ -356,7 +420,20 @@
                 </a>
                 </section>
         </div><br><br>
-       // <-- ADD CONTENT LINKS TO OTHER STUDENTS -->
+
+       <div class="contentPageContainer">
+            <section class="contentText">
+                <h2>Content Pages</h2><br>
+                <ul>
+                    <li><a href="content_ST1.html"><span style='font-size:50px;'>&#127793;</span>Content Page - Student 1</a></li> <!--Emoji Reference: https://www.w3schools.com/charsets/ref_emoji_plants.asp-->
+                    <li><a href="content_ST2.html"><span style='font-size:50px;'>&#127794;</span>Content Page - Student 2</a></li> <!--Emoji Reference: https://www.w3schools.com/charsets/ref_emoji_plants.asp-->
+                    <li><a href="content_ST3.html"><span style='font-size:50px;'>&#127795;</span>Content Page - Student 3</a></li> <!--Emoji Reference: https://www.w3schools.com/charsets/ref_emoji_plants.asp-->
+                    <li><a href="content_ST4.html"><span style='font-size:50px;'>&#127796;</span>Content Page - Student 4</a></li> <!--Emoji Reference: https://www.w3schools.com/charsets/ref_emoji_plants.asp-->
+                </ul>
+            </section>
+        </div>
+       
+
         <section class="ourMission">
             <div class="ourMissionContainer">
                 <h2>Our Mission</h2><br>
@@ -365,6 +442,10 @@
         </section>
 
     </main>
+
+        <dl class="top">
+            <dt><span>&#9757;<a href="#top">Move to top</a></span></dt>
+        </dl>
 
     <footer>
         <h3>Contact Us</h3><br>
