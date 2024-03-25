@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Climate Action</title>
+	<style>
+		body {
+			background-image:linear-gradient(#95e38b, #6d9160); /*Background color gradient */
+			color: white;
+			font-family: Arial, sans-serif;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			font-size: 48px;
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-size: 24px;
+			margin-bottom: 30px;
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+
+		li {
+			font-size: 20px;
+			background-color: white; /*Background color of student names */
+			color: #00ba19; /*Student names font color */
+			padding: 10px 20px;
+			border-radius: 5px;
+		}
+        
+        /*Code adapted from W3Schools
+        https://www.w3schools.com/howto/howto_css_loader.asp */
+
+		.loader { /* Loader dimensions */
+			width: 50px;
+			height: 50px;
+			border: 5px solid #52ab7c;
+			border-top: 5px solid white;
+			border-radius: 50%;
+			animation: rotation 1s linear infinite;
+			margin-bottom: 30px;
+		}
+
+		@keyframes rotation { /*Loading rotation*/
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+	</style>
+</head>
+<body>
+	<div class="loader"></div>
+	<h1>Climate Action</h1>
+	<p>We are aligned with UN to support the preservation of forests and other environmental outcomes.</p>
+    <p>Group members:</p>
+	<ul>
+		<li>Nael</li>
+		<li>Diego</li>
+		<li>Fernando</li>
+		<li>Hasan</li>
+	</ul>
+
+	<script> //Javascript
+		setTimeout(function() {
+			window.location.href = 'home.html'; //Redirection to the home page, Student 2
+		}, 4000);
+	</script>
+</body>
+</html>
