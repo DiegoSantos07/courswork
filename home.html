@@ -1,123 +1,465 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
 
-body {
-    font-family: sans-serif;
-    position: relative;
-    padding: 0;
-    margin: 0;
-}
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            position: relative;
+        }
 
-header {
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-}
+        body {
+            font-family: sans-serif;
+            position: relative;
+            padding: 0;
+            margin: 0;
+        }
 
-.climateGroup {
-    position: relative;
-    text-align: center;
-    align-items: center;
-    padding: 50px;
-    margin-top: 22px;
-    margin-left: auto;
-    color: black;
-    box-shadow: 0 5px 8px rgba(1, 1, 1, 0.1);
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 30px;
-    font-weight: bold;
-    color: rgb(15, 122, 79);
-    margin-bottom: 150px;
-    z-index: -1;
-    background-color: whitesmoke;
-}
+        header {
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.logo img {
-    float: left;
-    text-align: left;
-    margin-right: 10px;
-    margin-left: 100px;
-    margin-top: 25px;
-    max-width: 300px;
-    height: auto;
-    border-radius: 10%;
-}
+        .climateGroup {
+            position: relative;
+            text-align: center;
+            align-items: center;
+            padding: 50px;
+            margin-top: 22px;
+            margin-left: auto;
+            color: black;
+            box-shadow: 0 5px 8px rgba(1, 1, 1, 0.1);
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(15, 122, 79);
+            margin-bottom: 150px;
+            z-index: -1;
+            background-color: whitesmoke;
+        }
 
-.forest img {
-    max-width: 100%;
-    position: relative;
-    margin: 0px;
-}
+        .logo img {
+            float: left;
+            text-align: left;
+            margin-right: 10px;
+            margin-left: 100px;
+            margin-top: 25px;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10%;
+        }
 
-nav {
-    align-items: center;
-    margin-top: -95px;
-    margin-bottom: 10px;
-    box-shadow: 0 10px 8px rgba(1, 1, 1, 0.1);
-    background-color: whitesmoke;
-}
+        .forest img {
+            max-width: 100%;
+            position: relative;
+            margin: 0px;
+        }
 
-nav ul {
-    list-style-type: none;
-    padding: 10px;
-    margin: 0 auto;
-}
+        nav {
+            align-items: center;
+            margin-top: -95px;
+            margin-bottom: 10px;
+            box-shadow: 0 10px 8px rgba(1, 1, 1, 0.1);
+            background-color: whitesmoke;
+        }
 
-nav ul li {
-    display: inline-block;
-    margin-right: 10px;
-}
+        nav ul {
+            list-style-type: none;
+            padding: 10px;
+            margin: 0 auto;
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.5s ease;
-    padding: 10px 20px;
-    border: 1px solid transparent;
-    display: inline-block;
-}
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
 
-nav ul li a.active, nav ul li a:hover  {
-    color: #007bff; 
-    background-color: #ffffff;
-    border-color: black;
-}
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.5s ease;
+            padding: 10px 20px;
+            border: 1px solid transparent;
+            display: inline-block;
+        }
 
-main {
-    padding: 20px;
-    width: 100%;
-}
+        nav ul li a.active, nav ul li a:hover  {
+            color: #007bff; 
+            background-color: #ffffff;
+            border-color: black;
+        }
 
-.content {
-    padding: 20px;
-}
+        main {
+            padding: 20px;
+            width: 100%;
+        }
 
-.topBar {
-    background-color: rgb(15, 122, 79);
-    padding: 2px;         
-} 
+        .content {
+            padding: 20px;
+        }
+
+        .topBar {
+            background-color: rgb(15, 122, 79);
+            padding: 2px;          
+        }
+
+        .top {
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            z-index: 999;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: rgb(15, 122, 79);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .videoContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video1 video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .videoText {
+            padding: 20px;
+            align-items: center;
+            text-align: center;
+            text-decoration: underline;
+            color: rgb(15, 122, 79);
+        }
+
+        .galleryContainer {
+            display: flex;
+            align-items: center;
+            background-color: lightyellow;
+            box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
+            max-width: 80%;
+            justify-content: center;
+            margin: 0 auto;
+            transition: box-shadow 0.6  ease;
+        }
+
+        .galleryContainer:hover {
+            box-shadow: 10px 8px 30px black;
+        }
+
+        .galleryContainer img {
+            max-width: 70%;
+            width: 50%;
+            height: auto;
+        }
+
+        .galleryText h2 {
+            flex: 1;
+            padding: 20px;
+            align-items: center;
+            margin-left: 20px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .shopContainer {
+            display: flex;
+            align-items: center;
+            background-color: paleturquoise;
+            box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
+            max-width: 80%;
+            justify-content: center;
+            margin: 0 auto;
+            transition: box-shadow 0.6  ease;
+        }
+
+        .shopContainer:hover {
+            box-shadow: 10px 8px 30px black;
+        }
+
+        .shopContainer img {
+            max-width: 70%;
+            width: 50%;
+            height: auto;
+        }
+
+        .shopText h2 {
+            flex: 1;
+            padding: 20px;
+            align-items: center;
+            margin-left: 20px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .userProfileContainer {
+            display: flex;
+            align-items: center;
+            background-color: powderblue;
+            box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
+            max-width: 80%;
+            justify-content: center;
+            margin: 0 auto;
+            transition: box-shadow 0.6  ease;
+        }
+
+        .userProfileContainer:hover {
+            box-shadow: 10px 8px 30px black;
+        }
+
+        .userProfileContainer img {
+            max-width: 70%;
+            width: 50%;
+            height: auto;
+        }
+
+        .userProfileText h2 {
+            flex: 1;
+            padding: 20px;
+            align-items: center;
+            margin-left: 20px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .feedbackContainer {
+            display: flex;
+            align-items: center;
+            background-color: #b9f4ab;
+            box-shadow: 0 5px 30px rgba(1, 1, 1, 0.1);
+            max-width: 80%;
+            justify-content: flex-start;
+            margin: 0 auto;
+            transition: box-shadow 0.6  ease;
+        }
+
+        .feedbackContainer:hover {
+            box-shadow: 10px 8px 30px black;
+        }
+
+        .feedbackContainer img {
+            max-width: 70%;
+            width: 50%;
+            height: auto;
+        }
+
+        .feedbackText h2 {
+            flex: 1;
+            padding: 20px;
+            align-items: center;
+            margin-left: 20px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .contentPageContainer {
+            text-align: center;
+            margin-top: 70px;
+            background-color: oldlace;
+            box-shadow: 0 5px 30px rgba(2, 1, 2, 0.1);
+        }
+
+        .contentPageContainer h2 {
+            padding: 50px;
+        }
+
+        .contentPageContainer ul {
+            list-style: none;
+            justify-content: center;
+            padding-bottom: 10px;
+        }
+
+        .contentPageContainer ul li {
+            padding-bottom: 20px;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .contentPageContainer ul li:hover {
+            background-color: antiquewhite;
+            transition: background-color 0.5s ease;
+        }
+
+        .ourMission {
+            text-align: center;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .ourMissionContainer {
+            margin: 0 auto;
+            max-width: 1000px;
+            padding: 50px;
+            background-color: azure;
+            box-shadow: 0 5px 30px rgba(2, 1, 2, 0.1);
+        }
+
+        .ourMissionContainer h2 {
+            margin-bottom: 30px;
+
+        }
+
+        .ourMissionContainer p {
+            font-size: large;
+            line-height: 1.5;
+        }
+
+        a[href] {
+            text-decoration: none;
+            color:black;
+        }
+        
+
+
+    </style>
+
+
+</head>
+<body>
+    <header>
+
+        <div class="topBar">
+        </div>
+       
+        <div class="logo">
+            <img src="Images/image1.png" alt="Website Logo - Child planting a tree holding with hands stock photo. Reference: https://www.istockphoto.com/photo/child-planting-a-tree-holding-with-hands-gm1462151119-495782923?searchscope=image%2Cfilm">
+        </div>
+       
+        <div class="climateGroup">
+            <h1>Climate Group</a></h1>
+            <p>Working with United Nations for a better planet.</p>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="userprofile.html">User Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+        <div class="forest">
+            <img src="Images/image2.jpg" alt="Tranquil woodland glade dappled sunlight ferns green forest panorama. Reference: https://www.istockphoto.com/photo/tranquil-woodland-glade-dappled-sunlight-ferns-green-forest-panorama-gm1494540194-517841399?searchscope=image%2Cfilm">
+        </div>
     
-.top {
-    position: fixed;
-    bottom: 20px;
-    right: 10px;
-    z-index: 999;
-    font-size: large;
-    font-weight: bold;
-}
+    <main>
 
-footer {
-    background-color: rgb(15, 122, 79);
-    padding: 20px;
-    text-align: center;
-}
+        <div class="videoContainer">
+            <section class="video1">
+                <video controls>
+                    <source src="Videos/video1.mp4" type="video/mp4">
+                </video>
+            </section>
 
-a[href] {
-    text-decoration: none;
-    color:black;
-}
+            <section class="videoText">
+                <h2>You are not alone, we are a community</h2>
+                <h2>and we will fight together!</h2>
+            </section>
+        </div><br><br>
+
+        <div class="galleryContainer">
+            <img src="Images/image3.jpg" alt="Mature woman protesting in the street stock photo. Reference: https://www.istockphoto.com/photo/mature-woman-protesting-in-the-street-gm1432212075-474543157?searchscope=image%2Cfilm">
+            
+            <section class="galleryText">
+                <a href="gallery.html">
+                    <h2>Visit our gallery </h2>
+                    <h2>and check what we have been doing so far to contribute for a green future</h2>
+                </a>
+            </section>
+                
+        </div><br><br>
+
+        <div class="shopContainer">
+            <img src="Images/image4.jpg" alt="Second hand wardrobe, circular fashion, rent, swap clothes idea. stock photo. Reference: https://www.istockphoto.com/photo/second-hand-wardrobe-circular-fashion-rent-swap-clothes-idea-gm1307052468-397445054?searchscope=image%2Cfilm">
+            
+            <section class="shopText">
+                <a href="shop.html">
+                    <h2>Access our recyclable shop</h2>
+                    <h2>We offer a variety of products and we allocate the money for non-profit organisations focused on climate change</h2>
+                </a>
+            </section>
+        </div><br><br>
+
+        <div class="userProfileContainer">
+            <img src="Images/image5.jpg" alt="Team of young and diversity volunteer worker group enjoy charitable social work[...]. Reference: https://www.istockphoto.com/photo/team-of-young-and-diversity-volunteer-worker-group-enjoy-charitable-social-work-gm1407844610-458901066?searchscope=image%2Cfilm">
+            
+            <section class="userProfileText">
+                <a href="userprofile.html">
+                    <h2>Become a member of the Climate Group </h2>
+                    <h2>Only with a few details you can join our team and start contributing</h2>
+                </a>
+                </section>
+        </div><br><br>
+
+        <div class="feedbackContainer">
+            <img src="Images/image6.jpg" alt="Businessman holding global recycle symbol[...]. Reference: https://www.istockphoto.com/photo/businessman-holding-global-recycle-symbol-for-circular-economy-to-reduce-waste-by-gm2035517196-562343041?searchscope=image%2Cfilm">
+            
+            <section class="feedbackText">
+                <a href="feedback.html">
+                    <h2>Your feedback matters</h2>
+                    <h2>Tell us what you think and rate our website</h2>
+                </a>
+                </section>
+        </div><br><br>
+
+       <div class="contentPageContainer">
+            <section class="contentText">
+                <h2>Content Pages</h2><br>
+                <ul>
+                    <li><a href="content_ST1.html"><span style='font-size:50px;'>&#127793;</span>Content Page - Student 1</a></li> <!--Emoji Reference: https://www.w3schools.com/charsets/ref_emoji_plants.asp-->
+                    <li><a href="content_ST2.html"><span style='font-size:50px;'>&#127794;</span>Content Page - Student 2</a></li> <!--Emoji Reference: https://www.w3schools.com/charsets/ref_emoji_plants.asp-->
+                    <li><a href="content_ST3.html"><span style='font-size:50px;'>&#127795;</span>Content Page - Student 3</a></li> <!--Emoji Reference: https://www.w3schools.com/charsets/ref_emoji_plants.asp-->
+                    <li><a href="content_ST4.html"><span style='font-size:50px;'>&#127796;</span>Content Page - Student 4</a></li> <!--Emoji Reference: https://www.w3schools.com/charsets/ref_emoji_plants.asp-->
+                </ul>
+            </section>
+        </div>
+       
+
+        <section class="ourMission">
+            <div class="ourMissionContainer">
+                <h2>Our Mission</h2><br>
+                <p>Climate Group is committed to the UN's Global Goals and we understand that it is essential for actions to be taken urgently due to the recent climate disasters. We dedicate funds from our recyclable shop to institution which are acting for a green future, we also offer the possibility for volunteering to fight against waste, encourage the use of renewable energy, give financial support and participation on climate action conferences.</p>
+            </div>
+        </section>
+
+    </main>
+
+        <dl class="top">
+            <dt><span>&#9757;<a href="#top">Move to top</a></span></dt>
+        </dl>
+
+    <footer>
+        <h3><a href="pageEditor_ST2.html">Page Editor</h3></a><br><br>
+
+        <h3>Contact Us</h3><br>
+        <p><address><a href="mailto:w2005142@westminster.ac.uk">E-mail: Diego Santos de Freitas</a></address><br>
+
+        <h3>Address</h3><br>
+        <p>115 New Cavendish St, London W1W 6UW</p><br>
+
+        <h3>Accessibility</h3><br>
+        <p>The website ensures accessibility by complying with the WCAG regulations. By providing alternative text and usability, we aim to provide the best experience with the website under improvements. </p>
+        <p>If you have any accessibility concerns please let us know.</p>
+    </footer>
+    
+</body>
+</html>
