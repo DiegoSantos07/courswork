@@ -1,11 +1,10 @@
 <!doctype html>
 <html lang="en">
- 
 <head>
 
   <meta charset="UTF-8">
-
   <title>Feedback form</title>
+  <link rel="stylesheet" href="styles.css">
 
   <style>
 
@@ -36,7 +35,6 @@
         padding: 50px;
         margin-top: 22px;
         margin-left: auto;
-        color: black;
         box-shadow: 0 5px 8px rgba(1, 1, 1, 0.1);
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 30px;
@@ -160,15 +158,16 @@
         margin-bottom: 50px;
     }
 
-    input[type="submit"] {
+    input[type="submit"], 
+    button[type="button"] {
         background-color: aliceblue;
         padding: 5px 15px;
         border-radius: 10px;
         cursor: pointer;
-        
     }
 
-    input[type="submit"]:hover {
+    input[type="submit"]:hover,
+    button[type="button"]:hover {
         background-color: beige;
     }
 
@@ -176,6 +175,11 @@
         margin-right: 10px;
         margin-top: 10px;
         margin-bottom: 30px;
+    }
+
+    #subject {
+        padding: 5px;
+        font-size: 15px;
     }
 
     footer {
@@ -188,7 +192,7 @@
         text-decoration: none;
         color:black;
     }
-	
+    
   </style>
 
 </head>
@@ -211,7 +215,7 @@
         
         <nav>
             <ul>
-                <li><a>Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="userprofile.html">User Profile</a></li>
@@ -225,18 +229,17 @@
   
     <h1>Feedback form</h1><br><br>
 
-    <form action="mailto: w2005142@westminster.ac.uk" method="get">
-        
+    <form action="mailto:w2005142@westminster.ac.uk" method="post">
         <fieldset>
 
         <label for="userName">Name:</label>
         <input type="text" name="name" id="userName" required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed"><br><br>
 
-        <label for="useEmail">Email:</label>
-            <input type="email" name="email" required><br><br>
+        <label>Email:</label>
+        <input type="email" name="email" required><br><br>
             
 
-        <label for="pleasRate">Please rate our website from 0 to 10 according to your experience, with 0 meaning not satisfied and 10 extremely satisfied:</label><br><br>
+        <label>Please rate our website from 0 to 10 according to your experience, with 0 meaning not satisfied and 10 extremely satisfied:</label><br><br>
             <label><input type="radio" name="rating" value="0" required> 0</label>
 			<label><input type="radio" name="rating" value="1" required> 1</label>
 			<label><input type="radio" name="rating" value="2" required> 2</label>
@@ -247,24 +250,71 @@
 			<label><input type="radio" name="rating" value="7" required> 7</label>
 			<label><input type="radio" name="rating" value="8" required> 8</label>
 			<label><input type="radio" name="rating" value="9" required> 9</label>
-			<label><input type="radio" name="rating" value="10" required> 10</label>
-			
+			<label><input type="radio" name="rating" value="10" required> 10</label><br><br>
+		
+        
+        <select name="subject" id="subject" required>
+            <option value="" selected>Subject type</option>
+            <option value="Website errors">Website errors</option>
+            <option value="Functionality issues">Functionality issues</option>
+            <option value="Compatibility issues">Compatibility issues</option>
+            <option value="Suggestions">Suggestions</option>
+        </select><br><br>
         
         <label for="comments">Please leave us a comment: </label>
             <textarea name="comments" id="comments"
             rows="8" cols="60"></textarea><br><br>
 
-		<input type="submit" name="submit-button" value="Submit">
-        
-
+            <button type="button" onclick="viewQuery()">View Query</button>
+            <button type="button" onclick="editQuery()">Edit Query</button>
+            <input type="submit" name="submit-button" value="Submit">
+            
 		</fieldset>
     </form>
 
-    <dl class="top">
-        <dt><span>&#9757;<a href="#top">Move to top</a></span></dt>
+    <script>
+
+        function viewQuery() {
+            
+            var name = document.getElementById('userName').value;
+            var email = document.getElementsByName('email')[0].value;
+            var rating = document.querySelector('input[name="rating"]:checked');
+            var subject = document.getElementById('subject').value;
+            var comments = document.getElementById('comments').value;
+    
+            var queryString = "Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Rating: " + (rating ? rating.value : "Not provided") + "\n" +
+                "Subject: " + subject + "\n" +
+                "Comments: " + comments;
+    
+            alert("Query:\n" + queryString);
+        }
+
+        function editQuery() {
+        
+            document.getElementById('userName').value = '';
+            document.getElementsByName('email')[0].value = '';
+            
+            var ratingOptions = document.querySelectorAll('input[name="rating"]');
+            ratingOptions.forEach(option => {
+                option.checked = false;
+            });
+
+            document.getElementById('subject').selectedIndex = 0;
+            document.getElementById('comments').value = '';
+        }
+
+    </script>
+
+    <dl>
+        <dt class="top"><span>&#9757;<a href="#top">Move to top</a></span></dt>
+        <dd></dd>
     </dl>
 
     <footer>
+        <h3><a href="pageEditor_ST2.html" target="_blank">Page Editor</a></h3><br><br>
+
         <h3>Contact Us</h3><br>
         <p><address><a href="mailto:w2005142@westminster.ac.uk">E-mail: Diego Santos de Freitas</a></address><br>
 
