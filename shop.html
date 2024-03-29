@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+
+
+body{
+    background-color: #E3E7E8;
+    font-family: Arial, Helvetica, sans-serif
+}
+.container{
+    width: 1000px;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 50px;
+}
+.list .item{
+    text-align: center;
+    background-color: #DCE0E1;
+    padding: 20px;
+    box-shadow: 0 50px 50px #a8aaaa;
+    letter-spacing: 1px;
+}
+.list .item img{
+    width: 90%;
+    height: 430px;
+    object-fit: cover;
+}
+.list .item .title{
+    font-weight: 600;
+}
+.list .item .price{
+    margin: 10px;
+}
+.list .item button{
+    background-color: #68a068;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3%;
+}
+.Cart{
+    position: fixed;
+    top:0;
+    left: 100%;
+    width: 500px;
+    background-color: #b8daaa;
+    height: 100vh;
+    transition: 0.5s;
+}
+.active .Cart{
+    left: calc(100% - 500px);
+}
+.active .container{
+   transform: translateX(-200px);
+}
+.Cart h1{
+    color: #000000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.Cart .checkOut{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+.Cart .checkOut div{
+    background-color: #d9e8e1;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.Cart .checkOut div:nth-child(2){
+    background-color: #1C1F25;
+    color: #fff;
+}
+.listCart li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+}
+.listCart li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCart li img{
+    width: 90%;
+}
+.listCart li button{
+    background-color: rgba(198, 77, 77, 0.333);
+    border: none;
+}
+.listCart .count{
+    margin: 0 10px;
+}
+
+
+</style>
+
+<body class="">
+    
+    <div class="container">
+        <header>
+
+            <div class="topBar">
+            </div>
+           
+            <div class="logo">
+                <img src="Images/image1.png" alt="Website Logo - Child planting a tree holding with hands stock photo. Reference: https://www.istockphoto.com/photo/child-planting-a-tree-holding-with-hands-gm1462151119-495782923?searchscope=image%2Cfilm">
+            </div>
+           
+            <div class="climateGroup">
+                <h1>Climate Group</a></h1>
+                <p>Working with United Nations for a better planet.</p>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="userprofile.html">User Profile</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+            </nav>
+
+            <h1>Shop</h1>
+            <div class="shopping">
+                <img src="images/cart.jpg"> <!--Reference: https://media.istockphoto.com/id/1128229893/vector/shopping-cart-icon.jpg?s=1024x1024&w=is&k=20&c=3nq_zKNEdKMJ4pGaFh90jQ-lG9jl108DCR1R5zp1HPM=-->
+                <span class="quantity">0</span>
+            </div>
+                
+            <style>
+                /* Internal CSS styles affecting the shopping cart */
+                header .shopping {
+                    position: relative;
+                    text-align: right;
+                }
+                header .shopping img {
+                    width: 40px;
+                }
+                header .shopping span {
+                    background: red;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    position: absolute;
+                    top: -5px;
+                    left: 80%;
+                    padding: 3px 10px;
+                }
+            </style>
+        </header>
+
+        <div class="list">
+
+            
+            <div class="item">
+                <img src="images/t-shirt.jpg">
+                <div class="title">T-Shirt</div>
+                <div class="price">£15</div>
+                <button onclick="addToCart(0)">Add To Cart</button>
+            </div>
+
+            
+            <div class="item">
+                <img src="images/bag.jpg">
+                <div class="title">Reusable Bag</div>
+                <div class="price">£8</div>
+                <button onclick="addToCart(0)">Add To Cart</button>
+            </div>
+
+            
+            <div class="item">
+                <img src="images/bottle.jpg">
+                <div class="title">Water Bottle</div>
+                <div class="price">£12</div>
+                <button onclick="addToCart(0)">Add To Cart</button>
+            </div>
+
+            
+            <div class="item">
+                <img src="images/plant.jpg">
+                <div class="title">House plant</div>
+                <div class="price">£7</div>
+                <button onclick="addToCart(0)">Add To Cart</button>
+            </div>
+          
+        </div>
+    </div>
+    <div class="Cart">
+        <h1>Checkout</h1>
+        <ul class="listCart">
+        </ul>
+        <div class="checkOut">
+            <div class="total">£0</div>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
+
+    <script>
+
+        let openShopping = document.querySelector('.shopping');
+        let closeShopping = document.querySelector('.closeShopping');
+        let list = document.querySelector('.list');
+        let listCart = document.querySelector('.listCart');
+        let body = document.querySelector('body');
+        let total = document.querySelector('.total');
+        let quantity = document.querySelector('.quantity');
+
+        openShopping.addEventListener('click', () => {
+            body.classList.add('active');
+        });
+        closeShopping.addEventListener('click', () => {
+            body.classList.remove('active');
+        });
+
+        let products = [
+            {
+                id: 1,
+                name: 'T-Shirt',
+                image: 't-shirt.JPG',
+                price: 15
+            },
+            {
+                id: 2,
+                name: 'Bag',
+                image: 'bag.JPG',
+                price: 8
+            },
+            {
+                id: 3,
+                name: 'Bottle',
+                image: 'bottle.JPG',
+                price: 12
+            },
+            {
+                id: 4,
+                name: 'Plant',
+                image: 'plant.JPG',
+                price: 7
+            }
+        ];
+        let listCarts = [];
+
+        function initApp() {
+            products.forEach((value, key) => {
+                let newDiv = document.createElement('div');
+                newDiv.classList.add('item');
+                newDiv.innerHTML = `
+                    <img src="images/${value.image}">
+                    <div class="title">${value.name}</div>
+                    <div class="price">£${value.price}</div>
+                    <button onclick="addToCart(${key})">Add To Cart</button>`;
+                list.appendChild(newDiv);
+            });
+        }
+
+        function addToCart(key) {
+            if (listCarts[key] == null) {
+                listCarts[key] = { ...products[key], quantity: 1 };
+            } else {
+                listCarts[key].quantity++;
+            }
+            reloadCart();
+        }
+
+        function reloadCart() {
+            listCart.innerHTML = '';
+            let count = 0;
+            let totalPrice = 0;
+            listCarts.forEach((value, key) => {
+                if (value != null) {
+                    let newDiv = document.createElement('li');
+                    newDiv.innerHTML = `
+                        <div><img src="images/${value.image}" alt="${value.name}"></div>
+                        <div>${value.name}</div>
+                        <div>£${(value.price * value.quantity).toFixed(2)}</div>
+                        <div>
+                            <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                            <div class="count">${value.quantity}</div>
+                            <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                        </div>`;
+                    listCart.appendChild(newDiv);
+                    totalPrice += value.price * value.quantity;
+                    count += value.quantity;
+                }
+            });
+            total.innerText = '£' + totalPrice.toFixed(2);
+            quantity.innerText = count;
+        }
+
+        function changeQuantity(key, quantity) {
+            if (quantity <= 0) {
+                delete listCarts[key];
+            } else {
+                listCarts[key].quantity = quantity;
+            }
+            reloadCart();
+        }
+
+        initApp();
+    </script>
+</body>
+</html>
