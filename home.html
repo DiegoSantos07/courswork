@@ -34,7 +34,6 @@
             padding: 50px;
             margin-top: 22px;
             margin-left: auto;
-            color: black;
             box-shadow: 0 5px 8px rgba(1, 1, 1, 0.1);
             font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             font-size: 30px;
@@ -153,7 +152,7 @@
             max-width: 80%;
             justify-content: center;
             margin: 0 auto;
-            transition: box-shadow 0.6  ease;
+            transition: box-shadow 0.6s ease;
         }
 
         .galleryContainer:hover {
@@ -183,7 +182,7 @@
             max-width: 80%;
             justify-content: center;
             margin: 0 auto;
-            transition: box-shadow 0.6  ease;
+            transition: box-shadow 0.6s ease;
         }
 
         .shopContainer:hover {
@@ -213,7 +212,7 @@
             max-width: 80%;
             justify-content: center;
             margin: 0 auto;
-            transition: box-shadow 0.6  ease;
+            transition: box-shadow 0.6s ease;
         }
 
         .userProfileContainer:hover {
@@ -243,7 +242,7 @@
             max-width: 80%;
             justify-content: flex-start;
             margin: 0 auto;
-            transition: box-shadow 0.6  ease;
+            transition: box-shadow 0.6s ease;
         }
 
         .feedbackContainer:hover {
@@ -322,13 +321,12 @@
             color:black;
         }
         
-
-
     </style>
 
-
 </head>
+
 <body>
+
     <header>
 
         <div class="topBar">
@@ -339,7 +337,7 @@
         </div>
        
         <div class="climateGroup">
-            <h1>Climate Group</a></h1>
+            <h1>Climate Group</h1>
             <p>Working with United Nations for a better planet.</p>
         </div>
         
@@ -364,33 +362,30 @@
     <main>
 
         <div class="videoContainer">
-            <section class="video1">
-                <video controls>
-                    <source src="Videos/video1.mp4" type="video/mp4">
+                <video class="video1" controls>
+                    <source src="Videos/video1.mp4" type="video/mp4" alt="Slow motion video of a group of people participating in a protest against global warming stock video. Reference: https://www.istockphoto.com/video/slow-motion-video-of-a-group-of-people-participating-in-a-protest-against-global-gm1255403709-367257178?searchscope=image%2Cfilm">
                 </video>
-            </section>
+            </div>
 
-            <section class="videoText">
-                <h2>You are not alone, we are a community</h2>
-                <h2>and we will fight together!</h2>
-            </section>
-        </div><br><br>
+            <div>
+                <section class="videoText">
+                    <h2>You are not alone, we are a community</h2>
+                    <h2>and we will fight together!</h2>
+                </section>
+            </div><br><br>
 
         <div class="galleryContainer">
             <img src="Images/image3.jpg" alt="Mature woman protesting in the street stock photo. Reference: https://www.istockphoto.com/photo/mature-woman-protesting-in-the-street-gm1432212075-474543157?searchscope=image%2Cfilm">
-            
             <section class="galleryText">
                 <a href="gallery.html">
                     <h2>Visit our gallery </h2>
                     <h2>and check what we have been doing so far to contribute for a green future</h2>
                 </a>
             </section>
-                
         </div><br><br>
 
         <div class="shopContainer">
             <img src="Images/image4.jpg" alt="Second hand wardrobe, circular fashion, rent, swap clothes idea. stock photo. Reference: https://www.istockphoto.com/photo/second-hand-wardrobe-circular-fashion-rent-swap-clothes-idea-gm1307052468-397445054?searchscope=image%2Cfilm">
-            
             <section class="shopText">
                 <a href="shop.html">
                     <h2>Access our recyclable shop</h2>
@@ -401,7 +396,6 @@
 
         <div class="userProfileContainer">
             <img src="Images/image5.jpg" alt="Team of young and diversity volunteer worker group enjoy charitable social work[...]. Reference: https://www.istockphoto.com/photo/team-of-young-and-diversity-volunteer-worker-group-enjoy-charitable-social-work-gm1407844610-458901066?searchscope=image%2Cfilm">
-            
             <section class="userProfileText">
                 <a href="userprofile.html">
                     <h2>Become a member of the Climate Group </h2>
@@ -412,7 +406,6 @@
 
         <div class="feedbackContainer">
             <img src="Images/image6.jpg" alt="Businessman holding global recycle symbol[...]. Reference: https://www.istockphoto.com/photo/businessman-holding-global-recycle-symbol-for-circular-economy-to-reduce-waste-by-gm2035517196-562343041?searchscope=image%2Cfilm">
-            
             <section class="feedbackText">
                 <a href="feedback.html">
                     <h2>Your feedback matters</h2>
@@ -443,12 +436,13 @@
 
     </main>
 
-        <dl class="top">
-            <dt><span>&#9757;<a href="#top">Move to top</a></span></dt>
+        <dl>
+            <dt class="top"><span>&#9757;<a href="#top">Move to top</a></span></dt>
+            <dd></dd>
         </dl>
 
     <footer>
-        <h3><a href="pageEditor_ST2.html">Page Editor</h3></a><br><br>
+        <h3><a href="pageEditor_ST2.html" target="_blank">Page Editor</a></h3><br><br>
 
         <h3>Contact Us</h3><br>
         <p><address><a href="mailto:w2005142@westminster.ac.uk">E-mail: Diego Santos de Freitas</a></address><br>
