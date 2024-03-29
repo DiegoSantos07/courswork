@@ -10,118 +10,125 @@
 
 <style>
 
+    body{
+        background-color: #E3E7E8;
+        font-family: Arial, Helvetica, sans-serif
+    }
+    .container{
+        width: 1000px;
+        margin: auto;
+        transition: 0.5s;
+    }
 
-body{
-    background-color: #E3E7E8;
-    font-family: Arial, Helvetica, sans-serif
-}
-.container{
-    width: 1000px;
-    margin: auto;
-    transition: 0.5s;
-}
+    .list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+        row-gap: 20px;
+        margin-top: 50px;
+    }
+    .list .item{
+        text-align: center;
+        background-color: #DCE0E1;
+        padding: 20px;
+        box-shadow: 0 50px 50px #a8aaaa;
+        letter-spacing: 1px;
+    }
+    .list .item img{
+        width: 90%;
+        height: 430px;
+        object-fit: cover;
+    }
+    .list .item .title{
+        font-weight: 600;
+    }
+    .list .item .price{
+        margin: 10px;
+    }
+    .list .item button{
+        background-color: #68a068;
+        color: #fff;
+        width: 100%;
+        padding: 10px;
+        border-radius: 3%;
+        cursor: pointer; /* Adds a pointer when hovering */
+    }
+    .Cart{
+        position: fixed;
+        top:0;
+        left: 100%;
+        width: 500px;
+        background-color: #b2d0a2;
+        height: 100vh;
+        transition: 0.5s;
+    }
+    .active .Cart{
+        left: calc(100% - 500px);
+    }
+    .active .container{
+    transform: translateX(-200px);
+    }
+    .Cart h1{
+        color: #000000;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 100;
+        margin: 0;
+        padding: 0 20px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+    }
+    .Cart .checkOut{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
 
-.list{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
-    row-gap: 20px;
-    margin-top: 50px;
-}
-.list .item{
-    text-align: center;
-    background-color: #DCE0E1;
-    padding: 20px;
-    box-shadow: 0 50px 50px #a8aaaa;
-    letter-spacing: 1px;
-}
-.list .item img{
-    width: 90%;
-    height: 430px;
-    object-fit: cover;
-}
-.list .item .title{
-    font-weight: 600;
-}
-.list .item .price{
-    margin: 10px;
-}
-.list .item button{
-    background-color: #68a068;
-    color: #fff;
-    width: 100%;
-    padding: 10px;
-    border-radius: 3%;
-}
-.Cart{
-    position: fixed;
-    top:0;
-    left: 100%;
-    width: 500px;
-    background-color: #b8daaa;
-    height: 100vh;
-    transition: 0.5s;
-}
-.active .Cart{
-    left: calc(100% - 500px);
-}
-.active .container{
-   transform: translateX(-200px);
-}
-.Cart h1{
-    color: #000000;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 100;
-    margin: 0;
-    padding: 0 20px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-}
-.Cart .checkOut{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    }
+    .Cart .checkOut div{
+        background-color: #d9e8e1;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .Cart .checkOut div:nth-child(2){
+        background-color: #1C1F25;
+        color: #fff;
+    }
+    .listCart li{
+        display: grid;
+        grid-template-columns: 100px repeat(3, 1fr);
+        color: #fff;
+        row-gap: 10px;
+    }
+    .listCart li div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .listCart li img{
+        width: 90%;
+    }
+    .listCart li button{
+        background-color: #b2d0a2;
+        border: none;
+        cursor: pointer; /* Adds a pointer when hovering */
+    }
+    .listCart .count{
+        margin: 0 10px;
+    }
 
-}
-.Cart .checkOut div{
-    background-color: #d9e8e1;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    cursor: pointer;
-}
-.Cart .checkOut div:nth-child(2){
-    background-color: #1C1F25;
-    color: #fff;
-}
-.listCart li{
-    display: grid;
-    grid-template-columns: 100px repeat(3, 1fr);
-    color: #fff;
-    row-gap: 10px;
-}
-.listCart li div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.listCart li img{
-    width: 90%;
-}
-.listCart li button{
-    background-color: rgba(198, 77, 77, 0.333);
-    border: none;
-}
-.listCart .count{
-    margin: 0 10px;
-}
-
+    .quantity-btn {
+        background-color: green; 
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
 
 </style>
 
@@ -129,6 +136,7 @@ body{
     
     <div class="container">
         <header>
+            <!-- Website logo and Navigation bar passed from Student 2-->
 
             <div class="topBar">
             </div>
@@ -153,6 +161,7 @@ body{
                     <li><a href="sitemap.html">Sitemap</a></li>
                 </ul>
             </nav>
+            <!--Code from Student 2 Ends here-->
 
             <h1>Shop</h1>
             <div class="shopping">
@@ -185,50 +194,79 @@ body{
         </header>
 
         <div class="list">
-
-            
-            <div class="item">
-                <img src="images/t-shirt.jpg">
-                <div class="title">T-Shirt</div>
-                <div class="price">£15</div>
-                <button onclick="addToCart(0)">Add To Cart</button>
-            </div>
-
-            
-            <div class="item">
-                <img src="images/bag.jpg">
-                <div class="title">Reusable Bag</div>
-                <div class="price">£8</div>
-                <button onclick="addToCart(0)">Add To Cart</button>
-            </div>
-
-            
-            <div class="item">
-                <img src="images/bottle.jpg">
-                <div class="title">Water Bottle</div>
-                <div class="price">£12</div>
-                <button onclick="addToCart(0)">Add To Cart</button>
-            </div>
-
-            
-            <div class="item">
-                <img src="images/plant.jpg">
-                <div class="title">House plant</div>
-                <div class="price">£7</div>
-                <button onclick="addToCart(0)">Add To Cart</button>
-            </div>
-          
+          <!-- There was a problem here displaying each item twice, only the second repition of items were interactive (to add to the cart etc...) so I took out the code.
+             I have kept the list class because if I take it out then the rest of the items also disappear.-->
         </div>
     </div>
+    <!--Code adapted from https://www.youtube.com/watch?v=bCTd1eRX7Iw&t=354s&pp=ygUeY29kaW5nIGEgY2hlY2tvdXQgcGFnZSBpbiBodG1s -->
+   
     <div class="Cart">
         <h1>Checkout</h1>
+
         <ul class="listCart">
         </ul>
         <div class="checkOut">
             <div class="total">£0</div>
             <div class="closeShopping">Close</div>
         </div>
+
+        <!--Code adapted from W3Schools-->
+        <!--https://www.w3schools.com/tags/att_input_size.asp-->
+
+        <form id="checkoutForm" onsubmit="return validateForm()">
+            <!-- Personal Details -->
+            <label for="fullName">Full Name<span>*</span></label>
+            <input type="text" id="fullName" name="fullName" required>
+            
+            <!-- Contact Information -->
+            <label for="email">Email Address<span>*</span></label>
+            <input type="email" id="email" name="email" required>
+            
+            <!-- Shipping Address -->
+            <label for="address">Shipping Address<span>*</span></label>
+            <textarea id="address" name="address" required></textarea>
+
+                <!-- Card Details -->
+            <label for="cardNumber">Card Number<span>*</span></label>
+            <input type="text" id="cardNumber" name="cardNumber" required>
+            
+            <label for="expiryDate">Expiry Date<span>*</span></label>
+            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required maxlength="5" size="5">
+            
+            <label for="cvv">CVV<span>*</span></label>
+            <input type="text" id="cvv" name="cvv" required maxlength="3" size="3">
+            
+            <!-- Additional Information -->
+            <label for="additionalInfo">Additional Information</label>
+            <textarea id="additionalInfo" name="additionalInfo"></textarea>
+            
+            <!-- Submit Button -->
+            <button type="submit">Complete Purchase</button>
+        </form>
+        
+        <!-- Confirmation Message -->
+        <div id="confirmationMessage" style="display: none;">
+            <p>Thank you for your order!</p>
+        </div>
+
     </div>
+
+    
+
+    <footer> <!-- Template taken from Student 2-->
+        <h3><a href="pageEditor_ST1.html">Page Editor</h3></a><br>
+        <p>Page created by Nael</p><br>
+
+        <h3>Contact Us</h3><br>
+        <p><address><a href="mailto:w1994027@westminster.ac.uk">E-mail: Nael Hanif</a></address><br>
+
+        <h3>Address</h3><br>
+        <p>115 New Cavendish St, London W1W 6UW</p><br>
+
+        <h3>Accessibility</h3><br>
+        <p>The website ensures accessibility by complying with the WCAG regulations. By providing alternative text and usability, we aim to provide the best experience with the website under improvements. </p>
+        <p>If you have any accessibility concerns please let us know.</p>
+    </footer>
 
     <script>
 
@@ -250,25 +288,25 @@ body{
         let products = [
             {
                 id: 1,
-                name: 'T-Shirt',
+                name: 'Recyclable T-Shirt',
                 image: 't-shirt.JPG',
                 price: 15
             },
             {
                 id: 2,
-                name: 'Bag',
+                name: 'Reusable Bags',
                 image: 'bag.JPG',
                 price: 8
             },
             {
                 id: 3,
-                name: 'Bottle',
+                name: 'Reusable Water Bottle',
                 image: 'bottle.JPG',
                 price: 12
             },
             {
                 id: 4,
-                name: 'Plant',
+                name: 'House Plant',
                 image: 'plant.JPG',
                 price: 7
             }
@@ -321,6 +359,30 @@ body{
             total.innerText = '£' + totalPrice.toFixed(2);
             quantity.innerText = count;
         }
+
+        function validateForm() {
+        // Retrieve form inputs
+        var fullName = document.getElementById('fullName').value;
+        var email = document.getElementById('email').value;
+        var address = document.getElementById('address').value;
+        var cardNumber = document.getElementById('cardNumber').value;
+        var expiryDate = document.getElementById('expiryDate').value;
+        var cvv = document.getElementById('cvv').value;
+        
+        // Validate inputs
+        if (fullName.trim() === '' || email.trim() === '' || address.trim() === '' || 
+            cardNumber.trim() === '' || expiryDate.trim() === '' || cvv.trim() === '') {
+            alert('Please fill in all required fields.');
+            return false;
+        }
+        
+        
+        // Display confirmation message
+        document.getElementById('checkoutForm').style.display = 'none';
+        document.getElementById('confirmationMessage').style.display = 'block';
+        
+        return false; // Prevent form submission
+    }
 
         function changeQuantity(key, quantity) {
             if (quantity <= 0) {
