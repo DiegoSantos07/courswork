@@ -1,159 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>Page Editor Student 2</title>
     <link rel="stylesheet" href="styles.css">
 
     <style>
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            position: relative;
-        }
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+    }
 
-        body {
-            font-family: sans-serif;
-            position: relative;
-            padding: 0;
-            margin: 0;
-        }
+    body {
+        font-family: sans-serif;
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
 
-        header {
-            text-align: center;
-            flex-direction: column;
-            align-items: center;
-        }
+    header {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
 
-        .climateGroup {
-            position: relative;
-            text-align: center;
-            align-items: center;
-            padding: 50px;
-            margin-top: 22px;
-            margin-left: auto;
-            color: black;
-            box-shadow: 0 5px 8px rgba(1, 1, 1, 0.1);
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 30px;
-            font-weight: bold;
-            color: rgb(15, 122, 79);
-            margin-bottom: 150px;
-            z-index: -1;
-            background-color: whitesmoke;
-        }
+    .climateGroup {
+        position: relative;
+        text-align: center;
+        align-items: center;
+        padding: 32px;
+        margin-top: 22px;
+        margin-left: auto;
+        box-shadow: 0 5px 8px rgba(1, 1, 1, 0.1);
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(15, 122, 79);
+        margin-bottom: 150px;
+        z-index: -1;
+        background-color: whitesmoke;
+    }
 
-        .logo img {
-            float: left;
-            text-align: left;
-            margin-right: 10px;
-            margin-left: 100px;
-            margin-top: 25px;
-            max-width: 300px;
-            height: auto;
-            border-radius: 10%;
-        }
+    .logo img {
+        float: left;
+        text-align: left;
+        margin-right: 10px;
+        margin-left: 100px;
+        margin-top: 25px;
+        max-width: 300px;
+        height: auto;
+        border-radius: 10%;
+    }
 
-        .forest img {
-            max-width: 100%;
-            position: relative;
-            margin: 0px;
-        }
+    .forest img {
+        max-width: 100%;
+        position: relative;
+        margin: 0px;
+    }
 
-        nav {
-            align-items: center;
-            margin-top: -95px;
-            margin-bottom: 10px;
-            box-shadow: 0 10px 8px rgba(1, 1, 1, 0.1);
-            background-color: whitesmoke;
-        }
+    nav {
+        align-items: center;
+        margin-top: -95px;
+        margin-bottom: 10px;
+        box-shadow: 0 10px 8px rgba(1, 1, 1, 0.1);
+        background-color: whitesmoke;
+    }
 
-        nav ul {
-            list-style-type: none;
-            padding: 10px;
-            margin: 0 auto;
-        }
+    nav ul {
+        list-style-type: none;
+        padding: 10px;
+        margin: 0 auto;
+    }
 
-        nav ul li {
-            display: inline-block;
-            margin-right: 10px;
-        }
+    nav ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            transition: color 0.5s ease;
-            padding: 10px 20px;
-            border: 1px solid transparent;
-            display: inline-block;
-        }
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.5s ease;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        display: inline-block;
+    }
 
-        nav ul li a.active, nav ul li a:hover  {
-            color: #007bff; 
-            background-color: #ffffff;
-            border-color: black;
-        }
+    nav ul li a.active, nav ul li a:hover  {
+        color: #007bff; 
+        background-color: #ffffff;
+        border-color: black;
+    }
 
-        main {
-            padding: 20px;
-            width: 100%;
-        }
+    main {
+        padding: 20px;
+        width: 100%;
+    }
 
-        .content {
-            padding: 20px;
-        }
+    .content {
+        padding: 20px;
+    }
 
-        .topBar {
-            background-color: rgb(15, 122, 79);
-            padding: 2px;          
-        }
+    .topBar {
+        background-color: rgb(15, 122, 79);
+        padding: 2px;          
+    }
 
-        .top {
-            position: fixed;
-            bottom: 20px;
-            right: 10px;
-            z-index: 999;
-            font-size: large;
-            font-weight: bold;
-        }
+    .top {
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+        z-index: 999;
+        font-size: large;
+        font-weight: bold;
+    }
 
-        footer {
-            background-color: rgb(15, 122, 79);
-            padding: 20px;
-            text-align: center;
-        }
+    footer {
+        background-color: rgb(15, 122, 79);
+        padding: 20px;
+        text-align: center;
+    }
 
-        a[href] {
-            text-decoration: none;
-            color:black;
-        }
+    a[href] {
+        text-decoration: none;
+        color:black;
+    }
 
-        h2, h4 {
-           text-align: center;
-           padding: 20px;
-           margin-bottom: 50px;
-           padding-bottom: 20px;
-        }
+    .pageEditor {
+        background-color: honeydew;
+    }
 
-        p {
-            line-height: 2;
-            text-align: center;
-            padding: 5px;
-        }
+    h2, h4 {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 50px;
+        padding-bottom: 20px;
+    }
 
-        a {
-            text-decoration: none;
-        }
+    p {
+        line-height: 2;
+        text-align: center;
+        padding: 5px;
+    }
 
+    a {
+        text-decoration: none;
+    }
 
     </style>
 
 
 </head>
+
 <body>
+    
     <header>
 
         <div class="topBar">
@@ -170,7 +175,7 @@
         
         <nav>
             <ul>
-                <li><a>Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="userprofile.html">User Profile</a></li>
@@ -184,12 +189,11 @@
     
     <main>
 
-        <div>
-
+        <div class="pageEditor">
             <h2>Page Editor - Student 2</h2>
             <p>Student name: Diego Santos de Freitas<p>
             <p>ID: w2005142</p>
-            <p>Task: Student 2</p>
+            <p>Role: Student 2</p>
             <h4>In this coursework I designed the following pages:</h4>
             
             <h4> <a href="home.html">Home page</a></h4>
@@ -199,17 +203,17 @@
             <p>With Student 2 role, I have also created the feedback page, which allows users to input their name, e-mail, rate our website and submit comments sent to an e-mail. In this part, validation for input fields was required and also a confirmation message.</p><br><br>
             
             <h4><a href="content_ST2.html">Content page</a></h4>
-            <p>In this page I have included additional content linked to the choice of the Climate Action Global Goal's from the United Nations....</p><br><br>
+            <p>In this page I have included additional content linked to the choice of the Climate Action Global Goal's from the United Nations. I explained about climate change, renewable energy and I also provided sustainable tips.</p><br><br>
 
             <h4>Website styles and design</h4>
             <p>As part of Student 2 role, I have designed the theme of the website. The choice of colours and the implementation of the logo and navigation bar on other pages were designed by me.</p><br><br>
-
         </div>
 
     </main>
 
-    <dl class="top">
-        <dt><span>&#9757;<a href="#top">Move to top</a></span></dt>
+    <dl>
+        <dt class="top"><span>&#9757;<a href="#top">Move to top</a></span></dt>
+        <dd></dd>
     </dl>
 
     <footer>
