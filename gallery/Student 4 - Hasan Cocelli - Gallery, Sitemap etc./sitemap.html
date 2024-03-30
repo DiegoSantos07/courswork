@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap</title>   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(71, 249, 231);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .climateGroup {
+            position: relative;
+            text-align: center;
+            align-items: center;
+            padding: 50px;
+            margin-top: 22px;
+            margin-left: auto;
+            box-shadow: 0 5px 8px rgba(1, 1, 1, 0.1);
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(15, 122, 79);
+            margin-bottom: 150px;
+            z-index: -1;
+            background-color: whitesmoke;
+        }
+
+        .logo img {
+            float: left;
+            text-align: left;
+            margin-right: 10px;
+            margin-left: 100px;
+            margin-top: 25px;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10%;
+        }
+
+        nav {
+            align-items: center;
+            margin-top: -95px;
+            margin-bottom: 10px;
+            box-shadow: 0 10px 8px rgba(1, 1, 1, 0.1);
+            background-color: whitesmoke;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 10px;
+            margin: 0 auto;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.5s ease;
+            padding: 10px 20px;
+            border: 1px solid transparent;
+            display: inline-block;
+        }
+
+        nav ul li a.active, nav ul li a:hover  {
+            color: #007bff; 
+            background-color: #ffffff;
+            border-color: black;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'Kaushan Script', cursive;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+            max-width: 1200px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        circle, rect {
+            fill: #eee;
+            stroke: #333;
+            stroke-width: 2;
+            cursor: pointer;
+        }
+
+        circle:hover {
+            fill: rgb(0, 169, 171);
+        }
+
+        line {
+            stroke: #333;
+            stroke-width: 2;
+        }
+
+        text {
+            font-size: 14px;
+            text-anchor: middle;
+            pointer-events: none;
+        }
+
+        marker {
+            fill: #333;
+        }
+        footer {
+            background-color: green;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+        <div class="topBar">
+        </div>
+       
+        <div class="logo">
+            <img src="image1.png" alt="Website Logo - Child planting a tree holding with hands stock photo. Reference: https://www.istockphoto.com/photo/child-planting-a-tree-holding-with-hands-gm1462151119-495782923?searchscope=image%2Cfilm">
+        </div>
+       
+        <div class="climateGroup">
+            <h2>Climate Group</h2>
+            <p>Working with United Nations for a better planet.</p>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="userprofile.html">User Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <h1>Sitemap</h1>
+    <svg viewBox="0 0 1200 600">
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L0,6 L9,3 z" />
+        </marker>
+
+        <a href="home.html">
+            <circle id="home" cx="600" cy="100" r="40" />
+            <text x="600" y="100" dy=".35em">Home</text>
+        </a>
+        <a href="gallery.html">
+            <circle id="gallery" cx="300" cy="300" r="40" />
+            <text x="300" y="300" dy=".35em">Gallery</text>
+        </a>
+        <a href="shop.html">
+            <circle id="shop" cx="450" cy="300" r="40" />
+            <text x="450" y="300" dy=".35em">Shop</text>
+        </a>
+        <a href="userprofile.html">
+            <circle id="userProfile" cx="600" cy="300" r="40" />
+            <text x="600" y="300" dy=".35em">User Profile</text>
+        </a>
+        <a href="feedback.html">
+            <circle id="feedback" cx="750" cy="300" r="40" />
+            <text x="750" y="300" dy=".35em">Feedback</text>
+        </a>
+        <a href="team.html">
+            <circle id="team" cx="900" cy="300" r="40" />
+            <text x="900" y="300" dy=".35em">Team</text>
+        </a>
+
+        <line x1="600" y1="140" x2="600" y2="200"/>
+        <line x1="300" y1="200" x2="900" y2="200"/>
+
+        <line x1="300" y1="200" x2="300" y2="260" marker-end="url(#arrow)" />
+        <line x1="450" y1="200" x2="450" y2="260" marker-end="url(#arrow)" />
+        <line x1="600" y1="200" x2="600" y2="260" marker-end="url(#arrow)" />
+        <line x1="750" y1="200" x2="750" y2="260" marker-end="url(#arrow)" />
+        <line x1="900" y1="200" x2="900" y2="260" marker-end="url(#arrow)" />
+    </svg>
+    <footer>
+        <h3><a href="pageEditor_ST2.html" target="_blank">Page Editor</a></h3><br><br>
+    
+        <h3>Contact Us</h3><br>
+        <p><address><a href="mailto:w2045954@westminster.ac.uk">E-mail: Hasan Cocelli</a></address><br>
+    
+        <h3>Address</h3><br>
+        <p>115 New Cavendish St, London W1W 6UW</p><br>
+    
+        <h3>Accessibility</h3><br>
+        <p>The website ensures accessibility by complying with the WCAG regulations. By providing alternative text and usability, we aim to provide the best experience with the website under improvements. </p>
+        <p>If you have any accessibility concerns please let us know.</p>
+    </footer>
+</body>
+</html>
