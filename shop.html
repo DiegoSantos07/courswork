@@ -10,17 +10,55 @@
 
 <style>
 
-    body{
+    body {
         background-color: #E3E7E8;
         font-family: Arial, Helvetica, sans-serif
     }
-    .container{
-        width: 1000px;
-        margin: auto;
+    .container {
+        width: 100%;
         transition: 0.5s;
     }
 
-    .list{
+    header {
+        width: 100%
+    }
+
+  /* Internal CSS styles affecting the shopping cart, so that it is not affected by the styles.css made from Student 2 */
+    header .shopping {
+        position: relative;
+        text-align: right;
+    }
+
+    header .shopping img {
+        width: 40px;
+    }
+
+    header .shopping span {
+        background: red;
+        border-radius: 50%;
+        display: flex;
+        justify-content: right;
+        align-items: right;
+        color: #fff;
+        position:absolute;
+        top: -7px; /* Adjusting the position of the red circle */
+        right: 25px;
+        width: 20px; /* Adjusting the position of the quantity number inside the circle */
+        height: 20px;
+        padding: 5px;
+    }
+
+    .topBar {
+        height: 5px;
+        line-height: 100px;
+        padding: 0 15px;
+        border-bottom: 1px solid #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 20px;
@@ -28,7 +66,7 @@
         margin-top: 50px;
     }
 
-    .list .item{
+    .list .item {
         text-align: center;
         background-color: #DCE0E1;
         padding: 20px;
@@ -36,21 +74,21 @@
         letter-spacing: 1px;
     }
 
-    .list .item img{
+    .list .item img {
         width: 90%;
         height: 430px;
         object-fit: cover;
     }
 
-    .list .item .title{
+    .list .item .title {
         font-weight: 600;
     }
 
-    .list .item .price{
+    .list .item .price { 
         margin: 10px;
     }
 
-    .list .item button{
+    .list .item button {
         background-color: #68a068;
         color: #fff;
         width: 100%;
@@ -59,7 +97,7 @@
         cursor: pointer; /* Adds a pointer when hovering */
     }
 
-    .Cart{
+    .Cart {
         position: fixed;
         top:0;
         left: 100%;
@@ -74,15 +112,15 @@
         justify-content: space-between; /* Align items with space between */
     }
 
-    .active .Cart{
+    .active .Cart {
         left: calc(100% - 500px);
     }
 
-    .active .container{
+    .active .container {
     transform: translateX(-200px);
     }
 
-    .Cart h1{
+    .Cart h1 {
         color: #000000;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-weight: 100;
@@ -93,8 +131,7 @@
         align-items: center;
     }
 
-
-    .Cart .checkOut{
+    .Cart .checkOut {
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -103,7 +140,7 @@
 
     }
 
-    .Cart .checkOut div{
+    .Cart .checkOut div {
         background-color: #d9e8e1;
         width: 100%;
         height: 70px;
@@ -114,35 +151,35 @@
         cursor: pointer;
     }
 
-    .Cart .checkOut div:nth-child(2){
+    .Cart .checkOut div:nth-child(2) {
         background-color: #1C1F25;
         color: #fff;
     }
 
-    .listCart li{
+    .listCart li {
         display: grid;
         grid-template-columns: 100px repeat(3, 1fr);
         color: #fff;
         row-gap: 10px;
     }
 
-    .listCart li div{
+    .listCart li div {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .listCart li img{
+    .listCart li img {
         width: 90%;
     }
 
-    .listCart li button{
+    .listCart li button {
         background-color: #b2d0a2;
         border: none;
         cursor: pointer; /* Adds a pointer when hovering */
     }
 
-    .listCart .count{
+    .listCart .count {
         margin: 0 10px;
     }
 
@@ -185,8 +222,10 @@
 <body class="">
     
     <div class="container">
+        <!-- This header section contains the logo and navigation menu and the shopping cart icon -->
+        <!-- Links are within an unordered list -->
         <header>
-            <!-- Website logo and Navigation bar passed from Student 2-->
+            <!-- Website logo and Navigation bar passed from Student 2 -->
 
             <div class="topBar">
             </div>
@@ -202,57 +241,40 @@
             
             <nav>
                 <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="userprofile.html">User Profile</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="https://w2005142.users.ecs.westminster.ac.uk/group/home.html">Home</a></li>
+                    <li><a href="https://w2045954.users.ecs.westminster.ac.uk/group/gallery.html">Gallery</a></li>
+                    <li><a href="https://w1994027.users.ecs.westminster.ac.uk/group/shop.html">Shop</a></li>
+                    <li><a href="https://w1993048.users.ecs.westminster.ac.uk/group/userprofile.html">User Profile</a></li>
+                    <li><a href="https://w2005142.users.ecs.westminster.ac.uk/group/feedback.html">Feedback</a></li>
+                    <li><a href="https://w1993048.users.ecs.westminster.ac.uk/group/team.html">Team</a></li>
+                    <li><a href="https://w2045954.users.ecs.westminster.ac.uk/group/sitemap.html">Sitemap</a></li>
                 </ul>
             </nav>
-            <!--Code from Student 2 Ends here-->
+            <!-- Code from Student 2 Ends here -->
 
             <h1>Shop</h1>
             <div class="shopping">
-                <img src="images/cart.jpg"> <!--Reference: https://media.istockphoto.com/id/1128229893/vector/shopping-cart-icon.jpg?s=1024x1024&w=is&k=20&c=3nq_zKNEdKMJ4pGaFh90jQ-lG9jl108DCR1R5zp1HPM=-->
+                <img src="Images/cart.jpg"> <!-- Reference: https://media.istockphoto.com/id/1128229893/vector/shopping-cart-icon.jpg?s=1024x1024&w=is&k=20&c=3nq_zKNEdKMJ4pGaFh90jQ-lG9jl108DCR1R5zp1HPM= -->
                 <span class="quantity">0</span>
             </div>
                 
             <style>
-                /* Internal CSS styles affecting the shopping cart, so that it is not affected by the styles.css made from Student 2 */
-                header .shopping {
-                    position: relative;
-                    text-align: right;
-                }
-                header .shopping img {
-                    width: 40px;
-                }
-                header .shopping span {
-                    background: red;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: right;
-                    align-items: right;
-                    color: #fff;
-                    position:absolute;
-                    top: -7px; /* Adjusting the position of the red circle */
-                    right: 25px;
-                    width: 20px; /* Adjusting the position of the quantity number inside the circle */
-                    height: 20px;
-                    padding: 5px;
-                }
+
             </style>
         </header>
 
         <div class="list">
           <!-- There was a problem here displaying each item twice, only the second repition of items were interactive (to add to the cart etc...) so I took out the code.
-             I have kept the list class because if I take it out then the rest of the items also disappear.-->
+           I have kept the list class because if I take it out then the rest of the items also disappear -->
         </div>
     </div>
-    <!--Code adapted from https://www.youtube.com/watch?v=bCTd1eRX7Iw&t=354s&pp=ygUeY29kaW5nIGEgY2hlY2tvdXQgcGFnZSBpbiBodG1s -->
+    <!-- Code adapted from https://www.youtube.com/watch?v=bCTd1eRX7Iw&t=354s&pp=ygUeY29kaW5nIGEgY2hlY2tvdXQgcGFnZSBpbiBodG1s -->
    
     <div class="Cart">
+        <!-- This section includes the item list, total price and close button -->
+        <!-- There is a form to fill out for the user to provide their personal and card details -->
+        <!-- The JavaScript function 'validateForm()' is called upon the form submission -->
+
         <h1>Checkout</h1>
 
         <ul class="listCart">
@@ -263,11 +285,11 @@
         </div>
     
 
-        <!--Code adapted from W3Schools-->
-        <!--https://www.w3schools.com/tags/att_input_size.asp-->
+        <!-- Code adapted from W3Schools -->
+        <!-- https://www.w3schools.com/tags/att_input_size.asp -->
 
-        <!--Code also adapted from Week 4 Lecture Notes and Tutorial-->
-        <!--https://intranet.ecs.westminster.ac.uk/modules/4COSC011W/forms.html-->
+        <!-- Code also adapted from Week 4 Lecture Notes and Tutorial -->
+        <!-- https://intranet.ecs.westminster.ac.uk/modules/4COSC011W/forms.html -->
 
 
         <form id="checkoutForm" onsubmit="return validateForm()">
@@ -330,7 +352,7 @@
     
 
     <footer> <!-- Template taken from Student 2-->
-        <h3><a href="pageEditor_ST1.html">Page Editor</h3></a><br> <!--Redirects to my Page Editor page-->
+        <h3><a href="https://w1994027.users.ecs.westminster.ac.uk/group/content_ST1.html">Page Editor</h3></a><br> <!--Redirects to my Page Editor page-->
         <p>Page created by Nael</p><br>
 
         <h3>Contact Us</h3><br>
@@ -365,28 +387,28 @@
             {
                 id: 1,
                 name: 'Recyclable T-Shirt',
-                image: 't-shirt.JPG',
+                image: 't-shirt.jpg',
                 price: 15,
                 description: 'Made from cotton and recyclable materials, an eco-friendly T-shirt.'
             },
             {
                 id: 2,
                 name: 'Reusable Bags',
-                image: 'bag.JPG',
+                image: 'bag.jpg',
                 price: 8,
                 description: 'Durable and perfect for reducing plastic waste.'
             },
             {
                 id: 3,
                 name: 'Reusable Water Bottle',
-                image: 'bottle.JPG',
+                image: 'bottle.jpg',
                 price: 12,
                 description: 'Made from high quality stainless steel to keep your drinks cold or hot for hours.'
             },
             {
                 id: 4,
                 name: 'House Plant',
-                image: 'plant.JPG',
+                image: 'plant.jpg',
                 price: 7,
                 description: 'Adding a touch of nature to your home. Easy to care for and easy to maintain.'
             }
@@ -399,7 +421,7 @@
                 let newDiv = document.createElement('div');
                 newDiv.classList.add('item');
                 newDiv.innerHTML = `
-                    <img src="images/${value.image}">
+                    <img src="Images/${value.image}">
                     <div class="title">${value.name}</div>
                     <div class="description">${value.description}</div> <!-- Add description here --> 
                     <div class="price">£${value.price}</div>
@@ -425,7 +447,7 @@
                 if (value != null) {
                     let newDiv = document.createElement('li');
                     newDiv.innerHTML = `
-                        <div><img src="images/${value.image}" alt="${value.name}"></div>
+                        <div><img src="Images/${value.image}" alt="${value.name}"></div>
                         <div>${value.name}</div>
                         <div>£${(value.price * value.quantity).toFixed(2)}</div>
                         <div>
