@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        body{
+            background-color:whitesmoke;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .member {
+            margin: 10px;
+            text-align: center;
+        }
+        .member img {
+            width: 190px; /* Set thumbnail size */
+            height: auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .member img:hover, .member img:focus {
+            transform: scale(1.1); /* Zoom effect */
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+        .member-details {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .member:hover .member-details, .member:focus .member-details {
+            display: block; /* Show details on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+        <div class="topBar">
+        </div>
+       
+        <div class="logo">
+            <img src="image1.png" alt="Website Logo - Child planting a tree holding with hands stock photo. Reference: https://www.istockphoto.com/photo/child-planting-a-tree-holding-with-hands-gm1462151119-495782923?searchscope=image%2Cfilm">
+        </div>
+       
+        <div class="climateGroup">
+            <h1>Climate Group</h1>
+            <p>Working with United Nations for a better planet.</p>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a>Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="userprofile.html">User Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <h2>Student Details</h2>
+    <p>About Us - Hover over the images for details!</p>
+    
+    <div class="team-container">
+        <!-- Example for one member -->
+        <div class="member" tabindex="0"> <!-- tabindex allows keyboard navigation -->
+            <img src="Nael .png" alt="Nael Hanif, Developer">
+            <div class="member-details">
+                <h3>Nael Hanif</h3>
+                <p>Role: Student 1</p>
+                <p>Tasks: Splash screen and Shop</p>
+            </div>
+        </div>
+
+        <div class="team-container">
+            <!-- Example for one member -->
+            <div class="member" tabindex="0"> <!-- tabindex allows keyboard navigation -->
+                <img src="Diego1.png" alt="Diego Santos De Freitas  , Developer">
+                <div class="member-details">
+                    <h3>Diego Santos De Freitas</h3>
+                    <p>Role: Student 2</p>
+                    <p>Tasks: Home page and Feedback</p>
+                </div>
+            </div>
+
+            <div class="team-container">
+                <!-- Example for one member -->
+                <div class="member" tabindex="0"> <!-- tabindex allows keyboard navigation -->
+                    <img src="Fernando.png" alt="Fernando Jose Pinanjota Raza  , Developer">
+                    <div class="member-details">
+                        <h3>Fernando Jose Pinanjota Raza</h3>
+                        <p>Role: Student 3</p>
+                        <p>Tasks: User Profile and Team Page</p>
+                    </div>
+                </div>
+
+
+                <div class="team-container">
+                    <!-- Example for one member -->
+                    <div class="member" tabindex="0"> <!-- tabindex allows keyboard navigation -->
+                        <img src="Hasan Cocelli.png" alt="Hasan Cocelli  , Developer">
+                        <div class="member-details">
+                            <h3>Hasan Cocelli</h3>
+                            <p>Role: Student 4</p>
+                            <p>Tasks: Gallery and Site Map</p>
+                        </div>
+                    </div>
+
+       
+    </div>
+</body>
+</html>
