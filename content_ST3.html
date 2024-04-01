@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Page Editor Student 2</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    body {
+        font-family: sans-serif;
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .climateGroup {
+        position: relative;
+        text-align: center;
+        align-items: center;
+        padding: 32px;
+        margin-top: 22px;
+        margin-left: auto;
+        box-shadow: 0 5px 8px rgba(1, 1, 1, 0.1);
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(15, 122, 79);
+        margin-bottom: 150px;
+        z-index: -1;
+        background-color: whitesmoke;
+    }
+
+    .logo img {
+        float: left;
+        text-align: left;
+        margin-right: 10px;
+        margin-left: 100px;
+        margin-top: 25px;
+        max-width: 300px;
+        height: auto;
+        border-radius: 10%;
+    }
+
+    .forest img {
+        max-width: 100%;
+        position: relative;
+        margin: 0px;
+    }
+
+    nav {
+        align-items: center;
+        margin-top: -95px;
+        margin-bottom: 10px;
+        box-shadow: 0 10px 8px rgba(1, 1, 1, 0.1);
+        background-color: whitesmoke;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.5s ease;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        display: inline-block;
+    }
+
+    nav ul li a.active, nav ul li a:hover  {
+        color: #007bff; 
+        background-color: #ffffff;
+        border-color: black;
+    }
+  
+    .shortcuts{
+        text-align: center;
+        
+    }
+
+    .shortcuts a {
+        margin-right: 40px;
+        font-weight: bold;
+        color: lightgreen;
+
+    }
+    .shortcuts a::before{
+        content: "*";
+    }
+
+
+    main {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .topBar {
+        background-color: rgb(15, 122, 79);
+        padding: 2px;          
+    }
+
+    .top {
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+        z-index: 999;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    footer {
+        background-color: rgb(15, 122, 79);
+        padding: 20px;
+        text-align: center;
+    }
+
+    a[href] {
+        text-decoration: none;
+        color:black;
+    }
+
+    .pageEditor {
+        background-color: honeydew;
+    }
+
+    h2, h4 {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 50px;
+        padding-bottom: 20px;
+    }
+
+    p {
+        line-height: 2;
+        text-align: center;
+        padding: 5px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    
+
+
+
+    .section1 {
+            background-color: rgb(215, 237, 215);
+            padding: 15px;
+            margin: auto;
+            width: auto;
+            height: auto;
+            max-width: 90%; 
+        }
+        .section2 {
+            background-color: rgb(215, 237, 215);
+            padding: 15px;
+            margin: auto;
+            width: auto;
+            height: auto;
+            max-width: 90%; 
+        }
+
+        .section3 {
+            background-color: rgb(215, 237, 215);
+            padding: 15px;
+            margin: auto;
+            width: auto;
+            height: auto;
+            max-width: 90%; 
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+   
+
+    </style>
+
+
+</head>
+
+<body>
+    
+    <header>
+
+        <div class="topBar">
+        </div>
+       
+        <div class="logo">
+            <img src="image1.png" alt="Website Logo - Child planting a tree holding with hands stock photo. Reference: https://www.istockphoto.com/photo/child-planting-a-tree-holding-with-hands-gm1462151119-495782923?searchscope=image%2Cfilm">
+        </div>
+       
+        <div class="climateGroup">
+            <h1>Climate Group</h1>
+            <p>Working with United Nations for a better planet.</p>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="https://w2005142.users.ecs.westminster.ac.uk/group/home.html">Home</a></li>
+                <li><a href="https://w2045954.users.ecs.westminster.ac.uk/group/gallery.html">Gallery</a></li>
+                <li><a href="https://w1994027.users.ecs.westminster.ac.uk/group/shop.html">Shop</a></li>
+                <li><a href="https://w1993048.users.ecs.westminster.ac.uk/group/userprofile.html">User Profile</a></li>
+                <li><a href="https://w2005142.users.ecs.westminster.ac.uk/group/feedback.html">Feedback</a></li>
+                <li><a href="https://w1993048.users.ecs.westminster.ac.uk/group/team.html">Team</a></li>
+                <li><a href="https://w2045954.users.ecs.westminster.ac.uk/group/sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+        <br><br>
+        
+
+    </header>
+    <main>
+
+        <div class="shortcuts">
+             <a href="#causes">Causes of climate change</a>
+             <a href="#effects">Effects of climate change</a>
+            <a href="#action">Taking action</a>
+        
+        </div><br><br>
+
+            <section class="section1" id="causes">
+                <h2> Causes of climate change   </h2>
+                <p> <ul>
+                    <li> fuel combustion is a significant issue. Carbon dioxide (CO2) is released into the atmosphere in large quantities when we power our factories, cars, or electricity using petrol, coal, or oil. Heat is trapped in our atmosphere, which is bad.</li><br>
+
+                    <li>Taking Down Trees: Forests absorb CO2, acting as the planet's lungs. But that CO2 returns to the atmosphere when we cut them down for wood or land. Furthermore, those trees that may have helped absorb more CO2 are lost.</li><br>
+
+                   <li> Trash Issues: Methane is released into landfills when organic waste decomposes due to human disposal. Not very good at maintaining composure.</li>
+                   
+                </ul>
+                </p>
+                <img src="img1.jpg" alt="image of a single plant far away from the civilization. Reference:https://sphera.com/wp-content/uploads/2022/08/gettyimages-586087414-2048x2048-smaller-scaled.jpg"width="400">
+                
+            </section>
+             <br><br>
+            <section class="section2" id="effects">
+                <h2> Effects of climate change   </h2>
+                <p><ul>
+                   <li> Higher Temperatures: The planet appears to be suffering from a fever. Temperature increases can have negative effects on people, animals, and plants that are acclimated to particular temperatures.</li><br>
+
+                   <li> Unusual Weather: Increased severity of storms, hurricanes, and heat waves are in store. It seems as though the weather has gone crazy, making it more difficult for everyone to predict the future, particularly farmers.</li><br>
+
+                   <li>Health Concerns: Warmer temperatures and disrupted ecosystems can cause health issues for individuals. Consider an increase in heat-related illnesses like malaria, heatstrokes, and allergies due to the altered blooming of certain plants.</li>
+                </ul>
+                </p>
+            </section>
+               <br><br>
+            <section class="section2" id="action">
+                <h2> Taking action  </h2>
+                <p><ul>
+                    <li>Reduce, Reuse, Recycle (RRR): Let's start small. Reduce waste by using items only until they truly cannot be used any longer and recycling what you can. Comparable to saying to the planet, "I've got your back."</li><br>
+
+                    <li>Conserve energy by turning off lights when not in use and, if at all possible, switching to energy-efficient lightbulbs. Consider it similar to preserving the battery on your phone, only instead of saving energy for the planet.</li><br>
+
+                   <li> Join us in this project that we created specially to take action with the mother nature. </li>
+                    
+                    
+
+                </p>
+                <img src="img2.jpeg" alt="image of the earth and nature. Reference: https://www.earth.com/_next/image/?url=https%3A%2F%2Fcff2.earth.com%2Fuploads%2F2019%2F04%2F21141737%2FEarth-Day-2019-Why-its-more-important-than-ever-960x640.jpg&w=3840&q=75 " width="400">
+            </section>
+
+
+
+
+
+        
+    </main>
+    
+
+    <dl>
+    <dt class="top"><span>&#9757;<a href="#top">Move to top</a></span></dt>
+    <dd></dd>
+</dl>
+
+    <footer>
+        <h3>Contact Us</h3><br>
+        <p><address><a href="mailto:w1993048@westminster.ac.uk">E-mail: Fernando Jose Pinanjota Raza</a></address><br>
+
+        <h3>Address</h3><br>
+        <p>115 New Cavendish St, London W1W 6UW</p><br>
+
+        <h3>Accessibility</h3><br>
+        <p>The website ensures accessibility by complying with the WCAG regulations. By providing alternative text and usability, we aim to provide the best experience with the website under improvements. </p>
+        <p>If you have any accessibility concerns please let us know.</p>
+    </footer>
+    
+</body>
+</html>
